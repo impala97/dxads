@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends "client/index.html" %}
+<head>
+    {% block head %}
+        {{ super() }}
+        {% block title %}
+            {{ Profile }}
+        {% endblock %}
+    {% endblock %}
+</head>
+<body class="no-trans">
+    {% block banner %}
+        {{ super() }}
+    {% endblock %}
+
+
+    {% block content %}
+    {% endblock%}
+
+    {% block footer %}
+        {{ super() }}
+    {% endblock %}
+</body>
+</html>

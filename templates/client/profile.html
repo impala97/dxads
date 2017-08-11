@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends "client/index.html" %}
+<head>
+    {% block head %}
+        {{ super() }}
+        {% block title %}
+            {{ Profile }}
+        {% endblock %}
+    {% endblock %}
+</head>
+<body class="no-trans">
+
+    {% block navbar %}
+        {{ super() }}
+    {% endblock %}
+
+
+    {% block content %}
+    <div class="footer">
+    <div class="col-sm-6">
+    <div class="footer-content">
+        <form  method='POST' action="{{ url_for('rtprofile') }}">
+            <input type="text" name="fname_txt" id="fname_txt" placeholder="First Name" required/><br />
+            <input type="text" name="lname_txt" id="lname_txt" placeholder="Surname" required/><br />
+
+            <input type="radio" name="gender_rbtn" value="True" checked>Male</input>
+            <input type="radio" name="gender_rbtn" value="False">Female</input><br />
+
+            <input type="number" name="age_nbtn" id="age_nbtn" placeholder="Age" min="18" max="150" required /><br />
+
+            <input type="text" name="mobile_txt" placeholder="Mobile Number" maxlength="10" pattern="[0-9]+" required /><br />
+            <input type="email" name="email_txt" id="email_txt" placeholder="E-mail address" required /><br />
+
+            <input type="submit" name="update_btn" id="update_txt" value="Update" required />
+        </form>
+    </div></div>
+    {% endblock%}
+
+    {% block footer %}
+        {{ super() }}
+    {% endblock %}
+</body>
+</html>

@@ -1,0 +1,21 @@
+<html>
+<head>
+	<title>Digital Marketing</title>
+</head>
+<body><div border="3px" align="center">
+	<form method='POST' action="{{ url_for('login') }}">
+		<input type="text" name="un_txt" placeholder="Enter Username"/><br />
+		<input type="password" name="pwd_txt" placeholder="Enter Password" /><br />
+		<input type="submit" name="login" value="Login"/>
+		{% with messages = get_flashed_messages() %}
+			{% if messages %}
+				<ul class=flashes>
+				{% for message in messages %}
+					<li>{{ message }}</li>
+				{% endfor %}
+				</ul>
+			{% endif %}
+		{% endwith %}
+	</form>
+</body>
+</html>
