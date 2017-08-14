@@ -16,5 +16,6 @@ class config:
         if email is not None:
             self.__email__ = email
 
+
 if __name__ == '__main__':
     config()

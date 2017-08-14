@@ -3,13 +3,14 @@ from flask import (Flask, session, redirect, url_for, abort,render_template, fla
 import os
 from user import user
 from config import config
+from master import master
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'DIGITAL MARKETING!'
 
-@app.route('/')
-def rtlogin():
-    return render_template('client/login.html')
+
+
+#------------------Front End--------------------
 
 global user_obj
 user_obj = user()
@@ -18,7 +19,12 @@ user_obj = user()
 def rtindex():
     return render_template('client/index.html')
 
+#------------------IndexPage-------------------
+@app.route('/')
+def rtlogin():
+    return render_template('client/login.html')
 
+#-------------------LoginPage------------------------------
 @app.route('/login',endpoint='login', methods=['POST'])
 def login():
     if request.method == 'POST':
@@ -42,6 +48,7 @@ def login():
             return render_template('client/login.html')
 
 
+#-----------------ContactPage-----------------------------------
 @app.route('/contact')
 def rtcontact():
     return render_template('client/contact.html',username=config.__username__,email=config.__email__)
@@ -63,6 +70,7 @@ def reg_contact():
             return render_template('client/contact.html')
 
 
+#---------------------ProfilePage------------------
 @app.route('/profile')
 def rtprofile():
     return render_template('client/profile.html')
@@ -96,6 +104,7 @@ def update_profile():
             return render_template('client/profile.html')
 
 
+#------------------RegistrationPage-----------------------------
 @app.route('/registration')
 def rtregister():
     return render_template('client/registration.html')
@@ -128,12 +137,71 @@ def register():
             return render_template('client/registration.html')
 
 
+#----------------LogoutLogic-------------------------
 @app.route('/logout')
 def logout():
     session['logged_in'] = 0
-    flash('You were logged out')
-    del config.__id__,config.__email__,config.__username__
+    flash(message='You were logged out')
+    del config.__id__, config.__email__, config.__username__
     return render_template('client/login.html')
+
+
+#-----------------BackEnd-----------------------------------------
+#-----------------login-------------------------------------------
+
+@app.route('/master/')
+def rtmlogin():
+    data =  {'title' : 'Master | Login'}
+    return render_template('/master/login.html', **data)
+
+
+@app.route('/master/',methods=['GET','POST'])
+def master_login():
+
+    if request.method == 'POST' :
+        row = master().do_login(username=request.form['un_txt'])
+
+        print "test", row
+        if row is False:
+
+            flash(message='User Does not exist.')
+            return render_template('master/login.html')
+
+        if request.form['un_txt'] is None or request.form['pwd_txt'] is None :
+            flash(message='Invalid Username or Password.')
+            return render_template('master/login.html')
+        elif row[0][1] == request.form['un_txt'] :
+            if row[0][2] == request.form['pwd_txt']:
+                session['logged_in'] = 1
+                print row[0][0]
+                config.__id__ = row[0][0]
+                config.__username__ = row[0][1]
+                return redirect(url_for('rtmindex'))
+            else:
+                flash(message='Password Does not match.')
+                return render_template('master/login.html')
+        else:
+            flash(message='Invalid username')
+            return render_template('master/login.html')
+
+
+#-------------------------HomePage-------------------------
+@app.route('/master/index')
+def rtmindex():
+    data = {'title' : 'Master | Home'}
+    return render_template('/master/index.html', **data)
+
+
+#----------------------Registration--------------
+
+
+#----------------------------LogoutPage-------------------
+@app.route('/master/logout')
+def master_logout():
+    session['logged_in'] = 0
+    flash(message='You were logger out')
+    del config.__id__,config.__email__,config.__username__;
+    return url_for('rtmlogin')
 
 
 if __name__ == '__main__':

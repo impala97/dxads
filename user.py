@@ -2,7 +2,7 @@ from config import config
 from psqldb import dbcon
 import sys
 
-class user(object):
+class user():
     #To check user credentials
     def do_login(self,username):
         select = "select * from dxads_sch.login where name='%s';" %username

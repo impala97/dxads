@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>{{ url_for('static',filename='') }}
+	<head>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 		<meta charset="utf-8" />
-		<title>Login Page - Ace Admin</title>
+		<title> {{ title }} </title>
 
 		<meta name="description" content="User login page" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
@@ -44,10 +44,10 @@
 							<div class="center">
 								<h1>
 									<i class="ace-icon fa fa-leaf green"></i>
-									<span class="red">Ace</span>
+									<span class="red">Digital Marketing</span>
 									<span class="white" id="id-text2">Application</span>
 								</h1>
-								<h4 class="blue" id="id-company-text">&copy; Company Name</h4>
+								<h4 class="blue" id="id-company-text">&copy; ITMusketeers Pvt. LTD.</h4>
 							</div>
 
 							<div class="space-6"></div>
@@ -63,18 +63,18 @@
 
 											<div class="space-6"></div>
 
-											<form>
+											<form method="POST" action="{{ url_for('master_login') }}">
 												<fieldset>
 													<label class="block clearfix">
 														<span class="block input-icon input-icon-right">
-															<input type="text" class="form-control" placeholder="Username" />
+															<input type="text" class="form-control" placeholder="Username" name="un_txt" required />
 															<i class="ace-icon fa fa-user"></i>
 														</span>
 													</label>
 
 													<label class="block clearfix">
 														<span class="block input-icon input-icon-right">
-															<input type="password" class="form-control" placeholder="Password" />
+															<input type="password" class="form-control" placeholder="Password" name="pwd_txt" required />
 															<i class="ace-icon fa fa-lock"></i>
 														</span>
 													</label>
@@ -87,7 +87,7 @@
 															<span class="lbl"> Remember Me</span>
 														</label>
 
-														<button type="button" class="width-35 pull-right btn btn-sm btn-primary">
+														<button type="submit" class="width-35 pull-right btn btn-sm btn-primary" name="login_btn">
 															<i class="ace-icon fa fa-key"></i>
 															<span class="bigger-110">Login</span>
 														</button>
@@ -257,11 +257,11 @@
 							<div class="navbar-fixed-top align-right">
 								<br />
 								&nbsp;
-								<a id="btn-login-dark" href="#">Dark</a>
+								<a id="btn-login-dark" href="#" >Dark</a>
 								&nbsp;
 								<span class="blue">/</span>
 								&nbsp;
-								<a id="btn-login-blur" href="#">Blur</a>
+								<a id="btn-login-blur" href="#" active>Blur</a>
 								&nbsp;
 								<span class="blue">/</span>
 								&nbsp;
@@ -277,12 +277,12 @@
 		<!-- basic scripts -->
 
 		<!--[if !IE]> -->
-		<script src="{{ url_for('static',filename='') }}master/js/jquery-2.1.4.min.js"></script>
+		<script src="{{ url_for('static',filename='master/js/jquery-2.1.4.min.js') }}"></script>
 
 		<!-- <![endif]-->
 
 		<!--[if IE]>
-<script src="{{ url_for('static',filename='') }}master/js/jquery-1.11.3.min.js"></script>
+<script src="{{ url_for('static',filename='master/js/jquery-1.11.3.min.js') }}"></script>
 <![endif]-->
 		<script type="text/javascript">
 			if('ontouchstart' in document.documentElement) document.write("<script src='{{ url_for('static',filename='master/js/jquery.mobile.custom.min.js') }}'>"+"<"+"/script>");
