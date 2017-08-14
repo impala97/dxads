@@ -16,6 +16,31 @@
 
 
     {% block content %}
+    {% with messages = get_flashed_messages() %}
+			{% if messages %}
+				<ul class=flashes>
+				{% for message in messages %}
+					<li>{{ message }}</li>
+				{% endfor %}
+				</ul>
+			{% endif %}
+		{% endwith %}
+
+	<div class="section clearfix object-non-visible" data-animation-effect="fadeIn">
+		<div class="container">
+		    <h1 id="about" class="title text-center">Profile <span>Digital Marketing</span></h1>
+			<div class="space"></div>
+	        <div class="row">
+			<div class="col-md-6">
+			<div class="footer-content">
+
+			</div>
+			</div>
+			</div>
+     	    </div>
+       </div>
+    </div>
+
     {% endblock%}
 
     {% block footer %}

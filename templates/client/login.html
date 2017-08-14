@@ -6,7 +6,9 @@
 	<form method='POST' action="{{ url_for('login') }}">
 		<input type="text" name="un_txt" placeholder="Enter Username"/><br />
 		<input type="password" name="pwd_txt" placeholder="Enter Password" /><br />
-		<input type="submit" name="login" value="Login"/>
+		<input type="submit" name="login_btn" value="Login"/>
+		<p>not registered Yet.!Register Now.</p>
+		<a href="{{ url_for('rtregister') }}">Click Here</a>
 		{% with messages = get_flashed_messages() %}
 			{% if messages %}
 				<ul class=flashes>

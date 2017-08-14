@@ -109,9 +109,16 @@
 												<li><a href="{{ url_for('rtcontact') }}">Contact</a></li>
 
   												{% if not session.logged_in %}
-                                                <li><a href="{{ url_for('client/login.html') }}">log in</a></li>
+                                                <li><a href="{{ url_for('rtlogin') }}">log in</a></li>
   												{% else %}
                                                 <li><a href="{{ url_for('logout') }}">log out</a></li>
+												<script type="text/javascript">
+													alert("Welcome!Please update your profile.")
+													if(confirm("Update Profile") == True)
+													{
+														{{ url_for('rtregister') }}
+													}
+												</script>
   												{% endif %}
 											</ul>
 										</div>

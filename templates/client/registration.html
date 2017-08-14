@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends "client/index.html" %}
+<head>
+    {% block head %}
+        {{ super() }}
+        {% block title %}
+            {{ Profile }}
+        {% endblock %}
+    {% endblock %}
+</head>
+<body class="no-trans">
+    {% block banner %}
+        {{ super() }}
+    {% endblock %}
+
+
+    {% block content %}
+    {% with messages = get_flashed_messages() %}
+			{% if messages %}
+				<ul class=flashes>
+				{% for message in messages %}
+					<li>{{ message }}</li>
+				{% endfor %}
+				</ul>
+			{% endif %}
+    {% endwith %}
+
+	<div class="section clearfix object-non-visible" data-animation-effect="fadeIn">
+		<div class="container">
+		    <h1 id="about" class="title text-center">Profile <span>Digital Marketing</span></h1>
+			<div class="space"></div>
+	        <div class="row">
+			<div class="col-md-6">
+			<div class="footer-content">
+                <form method="POST" action="{{ url_for('rtregister') }}">
+                    <input type="text" name="un_txt" placeholder="Username" required/><br />
+		            <input type="password" name="pwd_txt" placeholder="Password" required/><br />
+                    <input type="password" name="cpwd_txt" placeholder="Confirm Password" required/><br />
+		            <input type="submit" name="reg_btn" value="Signup"/>
+                </form>
+			</div>
+			</div>
+			</div>
+     	    </div>
+       </div>
+    </div>
+
+    {% endblock%}
+
+    {% block footer %}
+        {{ super() }}
+    {% endblock %}
+</body>
+</html>
