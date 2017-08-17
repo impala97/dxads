@@ -4,7 +4,7 @@ import sys
 
 class dbcon():
     global con
-    con = db.connect(dbname='dxads', host='localhost', user='dxads', password='root')
+    con = db.connect(dbname='dxads', host='localhost', user='srmehta', password='root')
     global cursor
     cursor = con.cursor()
 

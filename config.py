@@ -6,7 +6,7 @@ class config:
     __id__ = 0
     __email__ = None
 
-    def __call__(self, username=None,id=None,email=None):
+    def __call__(self, username=None,id=0,email=None):
         if username is not None:
             self.__username__ = username
 
@@ -15,6 +15,7 @@ class config:
 
         if email is not None:
             self.__email__ = email
+
 
 
 if __name__ == '__main__':

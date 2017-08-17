@@ -1,4 +1,4 @@
-#!/home/srmehta/workspace/flask/dxads/flask-env/bin/python
+#!/media/srmehta/HOME/srmehta/dxads/flask-env/bin/python
 
 import sys
 import getopt

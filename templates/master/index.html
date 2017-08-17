@@ -327,7 +327,7 @@
 								<img class="nav-user-photo" src="{{ url_for('static',filename='master/images/avatars/user.jpg') }}" alt="Jason's Photo" />
 								<span class="user-info">
 									<small>Welcome,</small>
-									Jason
+									{{ username }}
 								</span>
 
 								<i class="ace-icon fa fa-caret-down"></i>
@@ -623,18 +623,18 @@
 
 						<ul class="submenu">
 							<li class="">
-								<a href="tables.html">
+								<a href="{{ url_for('rtmtables') }}">
 									<i class="menu-icon fa fa-caret-right"></i>
-									Simple &amp; Dynamic
+									Client
 								</a>
 
 								<b class="arrow"></b>
 							</li>
 
 							<li class="">
-								<a href="jqgrid.html">
+								<a href="{{ url_for('static',filename='master/jqgrid') }}">
 									<i class="menu-icon fa fa-caret-right"></i>
-									jqGrid plugin
+									Master
 								</a>
 
 								<b class="arrow"></b>
@@ -1694,7 +1694,7 @@
 
 																<div class="itemdiv memberdiv">
 																	<div class="user">
-																		<img alt="Susan's avatar" src="url_for('static',filename='master/images/avatars/avatar3.png')" />
+																		<img alt="Susan's avatar" src="{{ url_for('static',filename='master/images/avatars/avatar3.png') }}" />
 																	</div>
 
 																	<div class="body">
@@ -2151,7 +2151,7 @@
 		<!-- <![endif]-->
 
 		<!--[if IE]>
-<script src="{{ url_for('static',filename='master/js/jquery-1.11.3.min.js') }}"></script>
+		<script src="{{ url_for('static',filename='master/js/jquery-1.11.3.min.js') }}"></script>
 <![endif]-->
 		<script type="text/javascript">
 			if('ontouchstart' in document.documentElement) document.write("<script src='master/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
@@ -2173,7 +2173,7 @@
 
 		<!-- ace scripts -->
 		<script src="{{ url_for('static',filename='master/js/ace-elements.min.js') }}"></script>
-		<script src="{{ url_for('static',filename='master/js/ace.min.js	') }}"></script>
+		<script src="{{ url_for('static',filename='master/js/ace.min.js') }}"></script>
 
 		<!-- inline scripts related to this page -->
 		<script type="text/javascript">

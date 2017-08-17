@@ -45,7 +45,6 @@
 								<h1>
 									<i class="ace-icon fa fa-leaf green"></i>
 									<span class="red">Digital Marketing</span>
-									<span class="white" id="id-text2">Application</span>
 								</h1>
 								<h4 class="blue" id="id-company-text">&copy; ITMusketeers Pvt. LTD.</h4>
 							</div>
@@ -188,32 +187,32 @@
 											<div class="space-6"></div>
 											<p> Enter your details to begin: </p>
 
-											<form>
+											<form method="post" action="{{ url_for('master_register') }}">
 												<fieldset>
 													<label class="block clearfix">
 														<span class="block input-icon input-icon-right">
-															<input type="email" class="form-control" placeholder="Email" />
+															<input type="email" name="email_txt" class="form-control" placeholder="Email" />
 															<i class="ace-icon fa fa-envelope"></i>
 														</span>
 													</label>
 
 													<label class="block clearfix">
 														<span class="block input-icon input-icon-right">
-															<input type="text" class="form-control" placeholder="Username" />
+															<input type="text" name="un_txt" class="form-control" placeholder="Username" />
 															<i class="ace-icon fa fa-user"></i>
 														</span>
 													</label>
 
 													<label class="block clearfix">
 														<span class="block input-icon input-icon-right">
-															<input type="password" class="form-control" placeholder="Password" />
+															<input type="password" name="pwd_txt" class="form-control" placeholder="Password" />
 															<i class="ace-icon fa fa-lock"></i>
 														</span>
 													</label>
 
 													<label class="block clearfix">
 														<span class="block input-icon input-icon-right">
-															<input type="password" class="form-control" placeholder="Repeat password" />
+															<input type="password" class="form-control" name="cpwd_txt" placeholder="Repeat password" />
 															<i class="ace-icon fa fa-retweet"></i>
 														</span>
 													</label>
@@ -234,11 +233,7 @@
 															<span class="bigger-110">Reset</span>
 														</button>
 
-														<button type="button" class="width-65 pull-right btn btn-sm btn-success">
-															<span class="bigger-110">Register</span>
-
-															<i class="ace-icon fa fa-arrow-right icon-on-right"></i>
-														</button>
+														<input type="submit" class="width-65 pull-right btn btn-sm btn-success" name="submit_btn" value="Register" />
 													</div>
 												</fieldset>
 											</form>

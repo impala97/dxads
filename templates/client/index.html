@@ -7,7 +7,7 @@
 	<head>
 		{% block head %}
 		<meta charset="utf-8">
-		<title>Digital Marketing | {% block title%}{% endblock %}</title>
+		<title>{% block title%}{{ title }}{% endblock %}</title>
 		<meta name="description" content="Digital Marketing | Advertisement | Brand Developing">
 		<meta name="author" content="sr_mehta@ITMCS">
 
@@ -19,8 +19,8 @@
 
 
 		<!-- Web Fonts -->
-		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700,300&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-		<link href='http://fonts.googleapis.com/css?family=Raleway:700,400,300' rel='stylesheet' type='text/css'>
+		<link href="{{ url_for('static',filename='client/css/googleapis1.css') }}" rel='stylesheet' type='text/css'>
+		<link href="{{ url_for('static',filename='client/css/googleapis2.css') }}" rel='stylesheet' type='text/css'>
 
 		<!-- Bootstrap core CSS -->
 		<link href="{{ url_for('static',filename='client/bootstrap/css/bootstrap.css') }}" rel="stylesheet">

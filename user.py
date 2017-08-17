@@ -2,6 +2,7 @@ from config import config
 from psqldb import dbcon
 import sys
 
+
 class user():
     #To check user credentials
     def do_login(self,username):
@@ -15,7 +16,7 @@ class user():
             insert = "insert into dxads_sch.login(name,password) values('%s','%s')" % (str(username), pwd)
             valid_insert =  dbcon().do_insert(insert=insert)
             if valid_insert is True:
-                return self.__getIdbyName__(username=username)
+                return self.__getID__(username)
             else:
                 return "can not insert in database due to some technical error"
         else:
@@ -25,29 +26,28 @@ class user():
         select = "select name from dxads_sch.login where name='%s'" %username
         return dbcon().do_select(select=select)
 
-    def __getIdbyName__(self,username):
-        select = "select id from dxads_sch.login where name = '%s';",username
-        row = dbcon().do_select(select=select)
-        print row
-        return row[0][0]
-
-    def __getEmailbyId__(self,id):
-        select = "select email from dxads_sch.profile where id=%d"%id
-        return dbcon().do_select(select)
+    def __getIdEmailbyUsername__(self,username):
+        select = "select id from dxads_sch.login where name = '%s';" % username
+        id = dbcon().do_select(select=select)
+        select = "select email from dxads_sch.profile where id=%d" % id[0][0]
+        row = dbcon().do_select(select)
+        return id[0][0],row[0][0]
 
     def profile(self,fname,lname,gender,age,mobile,email):
         insert = "insert into dxads_sch.profile(id,fname,lname,gender,age,mobile,email,init) values(%d,'%s','%s','%s','%s','%s','%s','1');" % (
         config.__id__, fname, lname, gender, age, mobile, email)
 
         config.__email__ = email
-        return dbcon().do_insert(insert=insert)
+        return dbcon().do_insert(insert)
 
-    def __getID__(self):
-        select = "select id from dxads_sch.login where name='%s'"%config.__username__
+    def __getID__(self,username):
+        select = "select id from dxads_sch.login where name='%s'"% username
+        row = dbcon().do_select(select)
+        return row[0][0]
+
     def contact(self,message):
-        insert = "insert into dxads_sch.contact(name,email,message) values('%s','%s','%s');" % (config.__username__,email, message)
-        return dbcon().do_insert(dbinsert=insert)
-
+        insert = "insert into dxads_sch.contact(name,email,message) values('%s','%s','%s');" % (config.__username__,config.__email__, message)
+        return dbcon().do_insert(insert)
 
 
 if __name__ == "__main__":
