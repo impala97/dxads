@@ -87,16 +87,14 @@ def rtmchat():
 @app.route('/master/tables')
 def rtmtables():
     title = "Master | Tables"
-    return render_template('/master/tables.html',username=master.__username__, title=title)
-
-
+    return render_template('/master/Table/tables.html',username=master.__username__, title=title)
 
 
 @app.route('/master/master')
 def rtmdata():
     title = "Master | Master Data"
     data = master().getMasterTableData()
-    return render_template('/master/mdata.html',username=master.__username__,title=title,data=data)
+    return render_template('/master/Table/mdata.html',username=master.__username__,title=title,data=data)
 
 
 @app.route('/master/logout')
@@ -277,31 +275,61 @@ def master_register():
 
 
 #-------------------client data manipulation -------------------------
-@app.route('/master/client/login')
-def rtmclient():
+#-------------------client login data manipulation---------------------
+@app.route('/master/login')
+def rtclient():
     title = "Master | Client Data"
-    data = user().getClientTableData()
-    return render_template('/master/client.html', username=master.__username__, title=title, data=data)
+    data = user().getClientTableData(1)
+    return render_template('/master/Table/tbl_login.html', username=master.__username__, title=title, data=data)
 
 
-@app.route('/master/client/login', methods=['GET','POST'])
-def client():
-    user().InactiveClient(2)
-    return redirect(url_for('rtmclient'))
+@app.route('/master/login/active',methods=['POST'])
+def active():
+    if request.method == 'POST':
+        id = request.form['id']
+        rslt = user_obj.ActiveClient(id)
+        return redirect(url_for('rtclient'))
 
+@app.route('/master/login/delete', methods=['POST'])
+def delete():
+    if request.method == 'POST':
+        id = request.form['id']
+        rslt = user_obj.InactiveClient(id)
+    return redirect(url_for('rtclient'))
+
+
+@app.route('/master/login/update',methods=['POST'])
+def rtmupdate():
+    if request.method == 'POST':
+        id = request.form['id']
+        t = {'title':'Master | Login | Update'}
+        data = user_obj.getLoginData(id)
+        return render_template('/master/Table/loginform.html', username=master.__username__,id=id ,data=data,**t)
+
+
+@app.route('/master/login/Success',methods=['POST'])
 def update():
-    id = request.form['id']
-    name = request.form['name']
-    pwd = request.form['password']
-    active = request.form['active']
-    rslt = user().updateClient(id,name,pwd,active)
-    return redirect(url_for('rtmclient'))
+    old_id = request.form['old_id']
+    if request.method == 'POST':
+        new_id = request.form['id']
+        name = request.form['name']
+        pwd = request.form['password']
+        active = request.form['active']
+        rslt = user().updateClient(new_id,name,pwd,active,old_id)
+        return redirect(url_for('rtclient'))
 
-@app.route('/master/client/profile')
+
+#---------------Client Profile Data Manipulation-------------------------------
+@app.route('/master/profile')
 def rtmtblprofile():
     title = "Master | Client Profile Data"
-    data = user().getClientTableData()
-    return render_template('/master/tblprofile.html', username=master.__username__, title=title, data=data)
+    data = user().getClientTableData(2)
+    return render_template('/master/Table/tbl_profile.html', username=master.__username__, title=title, data=data)
+
+
+@app.route('/master/profile',methods=['POST'])
+def tblprofile():
+    pass
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000 , debug=True)

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+{% extends "master/index.html" %}
+<html lang="en">
+<head>
+{% block head %}
+    {% block meta%}
+    <meta charset="UTF-8">
+    {% endblock%}
+    <title>{{ title }}</title>
+    {% block css%}
+        {{ super() }}
+    {% endblock %}
+{% endblock %}
+</head>
+<body>
+{% block body %}
+    {{ super() }}
+{% endblock %}
+{% block content %}
+<div class="row">
+    <div class="col-xs-12">
+        <h3 class="header smaller lighter blue"> Login Table</h3>
+            <form method="POST" action="{{url_for('update') }}">
+                <input type="hidden" name="old_id" value="{{ id }}">
+                    <div class="row">
+                    <div class="col-xs-12">
+                        <div class="clearfix">
+                            <div class="pull-right tableTools-container"></div>
+                        </div>
+                        <div>
+                            <table id="dynamic-table" class="table table-striped table-bordered table-hover">
+                                <thead>
+                                     <tr>
+                                        <th>ID</th>
+                                        <th>Name</th>
+                                        <th class="hidden-480">Password</th>
+                                        <th>
+                                            <i class="ace-icon fa fa-clock-o bigger-110 hidden-480"></i>
+                                        Active
+                                        </th>
+                                         <th></th>
+                                     </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td><input type="text" name="id" value="{{ data[0][0] }}" /></td>
+                                    <td><input type="text" name="name" value="{{ data[0][1] }}" /></td>
+                                    <td><input type="text" name="password" value="{{ data[0][2] }}" /></td>
+                                    <td><input type="text" name="active" value="{{ data[0][3] }}" /></td>
+                                    <td>
+                                        <a href="{{ url_for('update') }}">
+                                            <button type="submit" name="Update" value="{{ data[0][0][0] }}" >Update</button>
+                                        </a>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </form>
+    </div><!-- /.span -->
+</div><!-- /.row -->
+{% endblock %}
+
+{% block footer %}
+    {{ super() }}
+{% endblock %}
+
+{% block scripts %}
+    {{ super() }}
+{% endblock %}
+</body>
+</html>

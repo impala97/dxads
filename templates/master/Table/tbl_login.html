@@ -17,7 +17,6 @@
     {{ super() }}
 {% endblock %}
 {% block content %}
-    You Have {{ data|length }} Tables in your client database.<br />
 <div class="row">
     <div class="col-xs-12">
         <h3 class="header smaller lighter blue"> Login Table</h3>
@@ -43,8 +42,8 @@
                     <th></th>
                 </tr>
             </thead>
-            <tbody><form>
-            {% for r in range(0,data[0]|length) %}
+            <tbody>
+            {% for r in data %}
                 <tr>
                     <td class="center">
                         <label class="pos-rel">
@@ -61,31 +60,31 @@
                             </a>
                         </div>
                     </td>
-                    {% for c in range(0,(data[0][r]|length)-2) %}
+                    {% for c in range(0,(data[0]|length)-2) %}
                     <td>
                     {% if c == 0 %}
-                        <label name="id">{{ data[0][r][0] }}</label>
+                        <label name="id">{{ r[0] }}</label>
                     {% else %}
-                        {{ data[0][r][c] }}
+                        {{ r[c] }}
                     {% endif %}
                     </td>
                     {% endfor %}
-                    {% if data[0][r][5] %}
-                        {% if data[0][r][6] %}
+                    {% if r[5] %}
+                        {% if r[6] %}
                             <td class="hidden-480">
                                 <span class="label label-sm label-success arrowed-in">Online</span>
                             </td>
-                        {% elif not data[0][r][6] %}
+                        {% elif not r[6] %}
                             <td class="hidden-480">
                                 <span class="label label-sm label-warning arrowed-in">Offline</span>
                             </td>
                         {% endif %}
-                    {% elif  not data[0][r][5] %}
-                        {% if data[0][r][6] %}
+                    {% elif  not r[5] %}
+                        {% if r[6] %}
                             <td class="hidden-480">
                                 <span class="label label-sm label-success arrowed-in">Online</span>
                             </td>
-                        {% elif not data[0][r][6] %}
+                        {% elif not r[6] %}
                             <td class="hidden-480">
                                 <span class="label label-sm label-warning arrowed-in">Offline</span>
                             </td>
@@ -93,116 +92,26 @@
                     {% endif %}
                     <td>
                         <div class="hidden-sm hidden-xs btn-group">
-                            <input type="hidden" name="tbl_name" value="login" />
-                            <a href="#modal-table" role="button" class="green" data-toggle="modal">
-                                <button class="btn btn-xs btn-info" >
+                            <form>
+                                <input type="hidden" name="id" value="{{r[0]}}">
+
+                                <button class="btn btn-xs btn-info" name ="opration" value="Update" formmethod="POST" formaction="{{ url_for('rtmupdate') }}">
                                     <i class="ace-icon fa fa-pencil bigger-120"></i>
                                 </button>
-                            </a>
-                            <button type="submit" class="btn btn-xs btn-danger" name="id" value="{{ data[0][r][0] }}" formmethod="POST" formaction="{{ url_for('client') }}">
-                                <i class="ace-icon fa fa-trash-o bigger-120"></i>
-                            </button>
-                        </div>
-                    </td>
-                </tr>
-                <tr class="detail-row">
-                    <td colspan="8">
-                        <div class="table-detail">
-                            <div class="row">
-                                <div class="col-xs-12 col-sm-2">
-                                    <div class="text-center">
-                                        <img height="150" class="thumbnail inline no-margin-bottom" alt="Domain Owner's Avatar" src="assets/images/avatars/profile-pic.jpg" />
-                                        <br />
-                                        <div class="width-80 label label-info label-xlg arrowed-in arrowed-in-right">
-                                            <div class="inline position-relative">
-                                                <a class="user-title-label" href="#">
-                                                    <i class="ace-icon fa fa-circle light-green"></i>
-                                                    &nbsp;
-                                                    <span class="white"></span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
 
-                                {% for c in range(0,data[1][r]|length) %}
-                                <div class="col-xs-12 col-sm-7">
-                                    <div class="space visible-xs"></div>
-                                    <div class="profile-user-info profile-user-info-striped">
-                                        <div class="profile-info-row">
-                                            <div class="profile-info-name">  </div>
-                                                <div class="profile-info-value">
-                                                    <span>{{ data[1][r][c] }}</span>
-                                                </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                {% endfor %}
+                                <button type="submit" class="btn btn-xs btn-success" name="operation" value="Active" formmethod="POST" formaction="{{ url_for('active') }}">
+                                    <i class="ace-icon fa fa-check bigger-120"></i>
+                                </button>
 
-                                <div class="col-xs-12 col-sm-3">
-                                    <div class="space visible-xs"></div>
-                                    <h4 class="header blue lighter less-margin">Send a message to Alex</h4>
-                                    <div class="space-6"></div>
-
-                                    <form>
-                                        <fieldset>
-                                            <textarea class="width-100" resize="none" placeholder="Type something…"></textarea>
-                                        </fieldset>
-
-                                        <div class="hr hr-dotted"></div>
-
-                                        <div class="clearfix">
-                                            <label class="pull-left">
-                                                <input type="checkbox" class="ace" />
-                                                <span class="lbl"> Email me a copy</span>
-                                            </label>
-
-                                            <button class="pull-right btn btn-sm btn-primary btn-white btn-round" type="button">
-                                                Submit
-                                                <i class="ace-icon fa fa-arrow-right icon-on-right bigger-110"></i>
-                                            </button>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
+                                <button type="submit" class="btn btn-xs btn-danger" name="operation" value="Delete" formmethod="POST" formaction="{{ url_for('delete') }}">
+                                    <i class="ace-icon fa fa-trash-o bigger-120"></i>
+                                </button>
+                            </form>
                         </div>
                     </td>
                 </tr>
             {% endfor %}
 
-                <div class="row">
-                    <div class="col-xs-12">
-                        <div class="clearfix">
-                            <div class="pull-right tableTools-container"></div>
-                        </div>
-                        <div>
-                            <table id="dynamic-table" class="table table-striped table-bordered table-hover">
-                                <thead>
-                                     <tr>
-                                        <th>ID</th>
-                                        <th>Name</th>
-                                        <th class="hidden-480">Password</th>
-                                        <th>
-                                            <i class="ace-icon fa fa-clock-o bigger-110 hidden-480"></i>
-                                        Active
-                                        </th>
-                                         <th></th>
-                                     </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td><input type="text" name="id" value="{{ data[0][0][0] }}" /></td>
-                                    <td><input type="text" name="name" value="{{ data[0][0][1] }}" /></td>
-                                    <td><input type="text" name="password" value="{{ data[0][0][2] }}" /></td>
-                                    <td><input type="text" name="active" value="{{ data[0][0][3] }}" /></td>
-                                    <td><button type="submit" name="Update" value="{{ data[0][0][0] }}" >Update</button>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </form>
             </tbody>
         </table>
     </div><!-- /.span -->

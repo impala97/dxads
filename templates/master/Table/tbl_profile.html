@@ -17,7 +17,6 @@
     {{ super() }}
 {% endblock %}
 {% block content %}
-    You Have {{ data|length }} Tables in your client database.<br />
 <div class="row">
     <div class="col-xs-12">
         <h3 class="header smaller lighter blue"> Profile Table</h3>
@@ -40,8 +39,8 @@
                     <th></th>
                 </tr>
             </thead>
-            <tbody><form method="post" action="{{ url_for('client') }}">
-            {% for r in range(0,data[1]|length) %}
+            <tbody>
+            {% for r in data %}
                 <tr>
                     <td class="center">
                         <label class="pos-rel">
@@ -49,11 +48,11 @@
                             <span class="lbl"></span>
                         </label>
                     </td>
-                    {% for c in range(0,(data[1][r]|length)-1) %}
+                    {% for c in range(0,(data[0]|length)-1) %}
                         {% if c != 3 %}
-                            <td>{{ data[1][r][c] }}</td>
+                            <td>{{ r[c] }}</td>
                         {% else %}
-                            {% if data[1][r][3] %}
+                            {% if r[3] %}
                                 <td>Male</td>
                             {% else %}
                                 <td>Female</td>
@@ -62,13 +61,12 @@
                     {% endfor %}
                     <td>
                         <div class="hidden-sm hidden-xs btn-group">
-                            <button class="btn btn-xs btn-info">
-                                <i class="ace-icon fa fa-pencil bigger-120"></i>
-                            </button>
-                            <input type="hidden" name="tbl_name" value="profile" />
-                            <button type="submit" class="btn btn-xs btn-danger" name="id" value="{{data[1][r][0]}}" formmethod="POST" formaction="{{ url_for('client') }}">
-                                <i class="ace-icon fa fa-trash-o bigger-120"></i>
-                            </button>
+                            <form method="post" action="{{ url_for('tblprofile') }}">
+                                <input type="hidden" name="id" value="{{r[0]}}">
+                                <button type="submit" class="btn btn-xs btn-info" formmethod="post" formaction="{{ url_for('tblprofile') }}">
+                                    <i class="ace-icon fa fa-pencil bigger-120"></i>
+                                </button>
+                            </form>
                         </div>
                     </td>
                 </tr>

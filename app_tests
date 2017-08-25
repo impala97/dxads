@@ -1,3 +1,36 @@
+client side controller
+rtindex - redirect to client index page
+rtlogin - redirect to client login page
+rtcontact - redirect to client contact page
+rtprofile - redirect to client profile page
+rtregister - redirect to client register page
+logout - logic of client logout page
+
+login - logic of client login
+reg_contact - logic of client feedback
+update_profile - logic of client profile page
+register - logic client registration
+
+
+master side controller
+rtmlogin - redirect to master login page
+rtmregister - redirect to master registration page
+rtmindex - redirect to master index page
+rtmchat - logic of chat funcationality at master page
+rtmtables - redirect to master template tables demo page
+rtmdata - redirect to display master's side table data
+master_logout - logic of master logout page
+
+master_login - logic master login
+master_register - logic master registration
+rtclient - logic to display client login table data
+active - logic of active button at rtclient
+delete - logic of delete button at rtclient
+rtmupdate - redirect to update client login details page
+update - logic of update client user details
+rtmtblprofile - redirect to display client profile table data
+tblporfile -redirect to update client profile detials page
+
 
 
 2.change/password
@@ -16,4 +49,5 @@ body
     content
     footer
 script
+
 
