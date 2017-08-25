@@ -86,7 +86,8 @@ CREATE TABLE contact (
     id integer NOT NULL,
     name text NOT NULL,
     email public.email NOT NULL,
-    message text
+    message text,
+    "time" timestamp without time zone DEFAULT '2017-08-23 13:42:00'::timestamp without time zone
 );
 
 
@@ -121,7 +122,10 @@ CREATE TABLE login (
     id integer NOT NULL,
     name text NOT NULL,
     password text NOT NULL,
-    active boolean DEFAULT true
+    active boolean DEFAULT true,
+    last_login timestamp without time zone DEFAULT '2017-08-19 13:04:00'::timestamp without time zone,
+    status boolean DEFAULT false,
+    live boolean DEFAULT false
 );
 
 
@@ -279,6 +283,41 @@ ALTER SEQUENCE tables_id_seq OWNED BY tables.id;
 SET search_path = master_sch, pg_catalog;
 
 --
+-- Name: chat; Type: TABLE; Schema: master_sch; Owner: srmehta
+--
+
+CREATE TABLE chat (
+    id integer NOT NULL,
+    name character varying(10) NOT NULL,
+    message character varying(1000) NOT NULL,
+    "time" timestamp without time zone
+);
+
+
+ALTER TABLE chat OWNER TO srmehta;
+
+--
+-- Name: chat_id_seq; Type: SEQUENCE; Schema: master_sch; Owner: srmehta
+--
+
+CREATE SEQUENCE chat_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE chat_id_seq OWNER TO srmehta;
+
+--
+-- Name: chat_id_seq; Type: SEQUENCE OWNED BY; Schema: master_sch; Owner: srmehta
+--
+
+ALTER SEQUENCE chat_id_seq OWNED BY chat.id;
+
+
+--
 -- Name: login; Type: TABLE; Schema: master_sch; Owner: postgres
 --
 
@@ -287,7 +326,10 @@ CREATE TABLE login (
     name character varying(10) NOT NULL,
     pwd character varying(20) NOT NULL,
     email public.email NOT NULL,
-    active boolean DEFAULT false
+    active boolean DEFAULT false,
+    last_login timestamp without time zone DEFAULT '2017-08-19 13:39:00'::timestamp without time zone,
+    status boolean DEFAULT false,
+    live boolean DEFAULT false
 );
 
 
@@ -394,6 +436,13 @@ ALTER TABLE ONLY tables ALTER COLUMN id SET DEFAULT nextval('tables_id_seq'::reg
 SET search_path = master_sch, pg_catalog;
 
 --
+-- Name: chat id; Type: DEFAULT; Schema: master_sch; Owner: srmehta
+--
+
+ALTER TABLE ONLY chat ALTER COLUMN id SET DEFAULT nextval('chat_id_seq'::regclass);
+
+
+--
 -- Name: login id; Type: DEFAULT; Schema: master_sch; Owner: postgres
 --
 
@@ -413,20 +462,23 @@ SET search_path = dxads_sch, pg_catalog;
 -- Data for Name: contact; Type: TABLE DATA; Schema: dxads_sch; Owner: postgres
 --
 
-COPY contact (id, name, email, message) FROM stdin;
-7	smit	sr_mehta@itmusketeers.com	Hello! Data successfully eneterd in database!
-8	smit	sr_mehta@itmusketeers.com	Hello! data is successfully entered in database...
-9	smit	sr_mehta@itmusketeers.com	test 110820171503
-10	smit	sr_mehta@itmusketeers.com	test 110820171845
-11	smit	sr_mehta@itmusketeers.com	test 110820171845
-12	smit	sr_mehta@itmusketeers.com	test 110820171845
-13	smit	sr_mehta@itmusketeers.com	test 110820171847
-14	smit	sr_mehta@itmusketeers.com	test 110820171848
-15	smit	sr_mehta@itmusketeers.com	test 110820171851
-16	smit	sr_mehta@itmusketeers.com	test 110820171853
-17	smit	sr_mehta@itmusketeers.com	test 110820171854
-18	smit	sr_mehta@itmusketeers.com	
-19	smit	sr_mehta@itmusketeers.com	fdf
+COPY contact (id, name, email, message, "time") FROM stdin;
+7	smit	sr_mehta@itmusketeers.com	Hello! Data successfully eneterd in database!	2017-08-23 13:42:00
+8	smit	sr_mehta@itmusketeers.com	Hello! data is successfully entered in database...	2017-08-23 13:42:00
+9	smit	sr_mehta@itmusketeers.com	test 110820171503	2017-08-23 13:42:00
+10	smit	sr_mehta@itmusketeers.com	test 110820171845	2017-08-23 13:42:00
+11	smit	sr_mehta@itmusketeers.com	test 110820171845	2017-08-23 13:42:00
+12	smit	sr_mehta@itmusketeers.com	test 110820171845	2017-08-23 13:42:00
+13	smit	sr_mehta@itmusketeers.com	test 110820171847	2017-08-23 13:42:00
+14	smit	sr_mehta@itmusketeers.com	test 110820171848	2017-08-23 13:42:00
+15	smit	sr_mehta@itmusketeers.com	test 110820171851	2017-08-23 13:42:00
+16	smit	sr_mehta@itmusketeers.com	test 110820171853	2017-08-23 13:42:00
+17	smit	sr_mehta@itmusketeers.com	test 110820171854	2017-08-23 13:42:00
+18	smit	sr_mehta@itmusketeers.com		2017-08-23 13:42:00
+19	smit	sr_mehta@itmusketeers.com	fdf	2017-08-23 13:42:00
+20	bhavik1991	bhavik@itmusketeers.com	hello! i am bhavik vyas.	2017-08-23 13:42:00
+21	bhavik1991	bhavik@itmusketeers.com	test 230820171534	2017-08-23 15:34:00
+23	smit	sr_mehta@itmuskeeters.com	test 230820171545	2017-08-23 15:45:00
 \.
 
 
@@ -434,16 +486,17 @@ COPY contact (id, name, email, message) FROM stdin;
 -- Name: contact_id_seq; Type: SEQUENCE SET; Schema: dxads_sch; Owner: postgres
 --
 
-SELECT pg_catalog.setval('contact_id_seq', 19, true);
+SELECT pg_catalog.setval('contact_id_seq', 23, true);
 
 
 --
 -- Data for Name: login; Type: TABLE DATA; Schema: dxads_sch; Owner: postgres
 --
 
-COPY login (id, name, password, active) FROM stdin;
-1	smit	sr@itmcs	t
-2	bhavik1991	bhavikvyas	t
+COPY login (id, name, password, active, last_login, status, live) FROM stdin;
+3	test	test	f	2017-08-19 13:04:00	f	f
+1	smit	sr@itmcs	f	2017-08-24 20:19:00	f	t
+2	bhavik1991	bhavikvyas	f	2017-08-25 10:04:00	f	t
 \.
 
 
@@ -451,7 +504,7 @@ COPY login (id, name, password, active) FROM stdin;
 -- Name: login_id_seq; Type: SEQUENCE SET; Schema: dxads_sch; Owner: postgres
 --
 
-SELECT pg_catalog.setval('login_id_seq', 2, true);
+SELECT pg_catalog.setval('login_id_seq', 3, true);
 
 
 --
@@ -521,12 +574,32 @@ SELECT pg_catalog.setval('tables_id_seq', 4, true);
 SET search_path = master_sch, pg_catalog;
 
 --
+-- Data for Name: chat; Type: TABLE DATA; Schema: master_sch; Owner: srmehta
+--
+
+COPY chat (id, name, message, "time") FROM stdin;
+1	bhavik1991	hello	2017-08-23 17:34:00
+2	srmehta	hi	2017-08-23 18:12:00
+3	srmehta	mentor!!!	2017-08-23 18:17:00
+4	bhavik1991	how are you???	2017-08-23 18:21:00
+5	srmehta	Me fine	2017-08-24 15:26:00
+\.
+
+
+--
+-- Name: chat_id_seq; Type: SEQUENCE SET; Schema: master_sch; Owner: srmehta
+--
+
+SELECT pg_catalog.setval('chat_id_seq', 5, true);
+
+
+--
 -- Data for Name: login; Type: TABLE DATA; Schema: master_sch; Owner: postgres
 --
 
-COPY login (id, name, pwd, email, active) FROM stdin;
-3	bhavik1991	bhavikvyas	bhavik@itmusketeers.com	t
-4	srmehta	srmehta	sr_mehta@itmusketeers.com	t
+COPY login (id, name, pwd, email, active, last_login, status, live) FROM stdin;
+4	srmehta	srmehta	sr_mehta@itmusketeers.com	t	2017-08-24 20:19:00	f	t
+3	bhavik1991	bhavikvyas	bhavik@itmusketeers.com	t	2017-08-25 10:05:00	f	t
 \.
 
 
@@ -605,6 +678,14 @@ ALTER TABLE ONLY tables
 
 
 SET search_path = master_sch, pg_catalog;
+
+--
+-- Name: chat chat_pkey; Type: CONSTRAINT; Schema: master_sch; Owner: srmehta
+--
+
+ALTER TABLE ONLY chat
+    ADD CONSTRAINT chat_pkey PRIMARY KEY (id);
+
 
 --
 -- Name: login login_name_key; Type: CONSTRAINT; Schema: master_sch; Owner: postgres
