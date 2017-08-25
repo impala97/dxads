@@ -1,23 +1,63 @@
 <html>
 <head>
-	<title>{{ title }}</title>
+	<title>
+		{{ title }}
+	</title>
+		<link rel="stylesheet" href="{{ url_for('static',filename='master/css/bootstrap.min.css') }}" />
+		<link rel="stylesheet" href="{{ url_for('static',filename='master/font-awesome/4.5.0/css/font-awesome.min.css') }}" />
+		<link rel="stylesheet" href="{{ url_for('static',filename='master/css/fonts.googleapis.com.css') }}" />
+		<link rel="stylesheet" href="{{ url_for('static',filename='master/css/ace.min.css') }}" />
+		<link rel="stylesheet" href="{{ url_for('static',filename='master/css/ace-part2.min.css') }}" />
+		<link rel="stylesheet" href="{{ url_for('static',filename='master/css/ace-rtl.min.css') }}" />
+		<link rel="stylesheet" href="{{ url_for('static',filename='master/css/ace-ie.min.css') }}" />
+
+		<script src="{{ url_for('static',filename='master/js/html5shiv.min.js') }}"></script>
+		<script src="{{ url_for('static',filename='master/js/respond.min.js') }}"></script>
 </head>
-<body><div border="3px" align="center">
-	<form method='POST' action="{{ url_for('login') }}">
-		<input type="text" name="un_txt" placeholder="Enter Username"/><br />
-		<input type="password" name="pwd_txt" placeholder="Enter Password" /><br />
-		<input type="submit" name="login_btn" value="Login"/>
-		<p>not registered Yet.!Register Now.</p>
-		<a href="{{ url_for('rtregister') }}">Click Here</a>
-		{% with messages = get_flashed_messages() %}
-			{% if messages %}
-				<ul class=flashes>
-				{% for message in messages %}
-					<li>{{ message }}</li>
-				{% endfor %}
-				</ul>
-			{% endif %}
-		{% endwith %}
+<body>
+<div border="3px" align="center">
+	<form method="POST" action="{{ url_for('login') }}">
+		<fieldset><br />
+			<label class="block clearfix">
+				<span class="block input-icon input-icon-right">
+					<input type="text" name="un_txt" placeholder="Enter Username"/><br />
+
+				</span>
+			</label>
+
+			<label class="block clearfix">
+				<span class="block input-icon input-icon-right">
+					<input type="password" name="pwd_txt" placeholder="Enter Password"/><br />
+
+				</span>
+			</label>
+
+			<div class="space"></div>
+			<div class="clearfix">
+				<label class="inline">
+					<input type="checkbox" class="ace" />
+					<span class="lbl"> Remember Me</span>
+				</label>
+
+				<button type="submit" class="width-15 pull-center btn btn-sm btn-primary" name="login_btn">
+					<i class="ace-icon fa fa-key"></i>
+					<span class="bigger-110">Login</span>
+				</button><br />
+			</div><br />
+
+			<p>not registered Yet.!<a href="{{ url_for('rtregister') }}">Register Now</a></p>
+			<div class="space-4">
+			{% with messages = get_flashed_messages() %}
+				{% if messages %}
+					<ul class=flashes>
+					{% for message in messages %}
+						<li>{{ message }}</li>
+					{% endfor %}
+					</ul>
+				{% endif %}
+			{% endwith %}
+			</div>
+		</fieldset>
 	</form>
 </body>
 </html>

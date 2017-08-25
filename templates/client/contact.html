@@ -3,9 +3,10 @@
 <head>
 {% block head %}
     {{ super() }}
+	<title>
 	{% block title %}
 		{{ title }}
-	{% endblock %}
+		{% endblock %}</title>
 {% endblock%}
 </head>
 

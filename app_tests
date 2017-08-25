@@ -1,19 +1,19 @@
 
-1.sign up
+
 2.change/password
 3.session management
 4.admin side show table  insert,update,delete
-5.stored procedure
-6.user name display
 
-####stored procedure
-select login*
-select reg*
-insert registration*
 
-#stored procedure
-init check for profile
-insert profile
 
-insert contact
+
+index:
+head
+    title
+    meta
+    css
+body
+    content
+    footer
+script
 

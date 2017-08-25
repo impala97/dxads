@@ -2,222 +2,63 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2840875d-7949-4bc1-92f1-124797b81e9d" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/Flask_Psycopg2-1.3.dist-info/DESCRIPTION.rst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/Flask_Psycopg2-1.3.dist-info/INSTALLER" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/Flask_Psycopg2-1.3.dist-info/METADATA" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/Flask_Psycopg2-1.3.dist-info/RECORD" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/Flask_Psycopg2-1.3.dist-info/WHEEL" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/Flask_Psycopg2-1.3.dist-info/metadata.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/Flask_Psycopg2-1.3.dist-info/top_level.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/Flask_WTF-0.14.2.dist-info/DESCRIPTION.rst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/Flask_WTF-0.14.2.dist-info/INSTALLER" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/Flask_WTF-0.14.2.dist-info/LICENSE.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/Flask_WTF-0.14.2.dist-info/METADATA" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/Flask_WTF-0.14.2.dist-info/RECORD" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/Flask_WTF-0.14.2.dist-info/WHEEL" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/Flask_WTF-0.14.2.dist-info/metadata.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/Flask_WTF-0.14.2.dist-info/top_level.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/WTForms-2.1.dist-info/DESCRIPTION.rst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/WTForms-2.1.dist-info/INSTALLER" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/WTForms-2.1.dist-info/METADATA" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/WTForms-2.1.dist-info/RECORD" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/WTForms-2.1.dist-info/WHEEL" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/WTForms-2.1.dist-info/metadata.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/WTForms-2.1.dist-info/top_level.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/flask_psycopg2/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/flask_wtf/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/flask_wtf/_compat.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/flask_wtf/csrf.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/flask_wtf/file.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/flask_wtf/form.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/flask_wtf/html5.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/flask_wtf/i18n.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/flask_wtf/recaptcha/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/flask_wtf/recaptcha/fields.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/flask_wtf/recaptcha/validators.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/flask_wtf/recaptcha/widgets.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/wtforms/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/wtforms/compat.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/wtforms/csrf/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/wtforms/csrf/core.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/wtforms/csrf/session.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/wtforms/ext/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/wtforms/ext/appengine/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/wtforms/ext/appengine/db.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/wtforms/ext/appengine/fields.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/wtforms/ext/appengine/ndb.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/wtforms/ext/csrf/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/wtforms/ext/csrf/fields.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/wtforms/ext/csrf/form.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/wtforms/ext/csrf/session.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/wtforms/ext/dateutil/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/wtforms/ext/dateutil/fields.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/wtforms/ext/django/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/wtforms/ext/django/fields.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/wtforms/ext/django/i18n.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/wtforms/ext/django/orm.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/wtforms/ext/django/templatetags/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/wtforms/ext/django/templatetags/wtforms.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/wtforms/ext/i18n/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/wtforms/ext/i18n/form.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/wtforms/ext/i18n/utils.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/wtforms/ext/sqlalchemy/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/wtforms/ext/sqlalchemy/fields.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/wtforms/ext/sqlalchemy/orm.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/wtforms/fields/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/wtforms/fields/core.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/wtforms/fields/html5.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/wtforms/fields/simple.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/wtforms/form.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/wtforms/i18n.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/wtforms/locale/ar/LC_MESSAGES/wtforms.mo" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/wtforms/locale/ar/LC_MESSAGES/wtforms.po" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/wtforms/locale/ca/LC_MESSAGES/wtforms.mo" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/wtforms/locale/ca/LC_MESSAGES/wtforms.po" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/wtforms/locale/cs_CZ/LC_MESSAGES/wtforms.mo" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/wtforms/locale/cs_CZ/LC_MESSAGES/wtforms.po" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/wtforms/locale/cy/LC_MESSAGES/wtforms.mo" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/wtforms/locale/cy/LC_MESSAGES/wtforms.po" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/wtforms/locale/de/LC_MESSAGES/wtforms.mo" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/wtforms/locale/de/LC_MESSAGES/wtforms.po" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/wtforms/locale/de_CH/LC_MESSAGES/wtforms.mo" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/wtforms/locale/de_CH/LC_MESSAGES/wtforms.po" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/wtforms/locale/el/LC_MESSAGES/wtforms.mo" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/wtforms/locale/el/LC_MESSAGES/wtforms.po" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/wtforms/locale/en/LC_MESSAGES/wtforms.mo" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/wtforms/locale/en/LC_MESSAGES/wtforms.po" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/wtforms/locale/es/LC_MESSAGES/wtforms.mo" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/wtforms/locale/es/LC_MESSAGES/wtforms.po" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/wtforms/locale/et/LC_MESSAGES/wtforms.mo" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/wtforms/locale/et/LC_MESSAGES/wtforms.po" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/wtforms/locale/fa/LC_MESSAGES/wtforms.mo" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/wtforms/locale/fa/LC_MESSAGES/wtforms.po" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/wtforms/locale/fr/LC_MESSAGES/wtforms.mo" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/wtforms/locale/fr/LC_MESSAGES/wtforms.po" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/wtforms/locale/it/LC_MESSAGES/wtforms.mo" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/wtforms/locale/it/LC_MESSAGES/wtforms.po" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/wtforms/locale/ja/LC_MESSAGES/wtforms.mo" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/wtforms/locale/ja/LC_MESSAGES/wtforms.po" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/wtforms/locale/ko/LC_MESSAGES/wtforms.mo" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/wtforms/locale/ko/LC_MESSAGES/wtforms.po" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/wtforms/locale/nb/LC_MESSAGES/wtforms.mo" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/wtforms/locale/nb/LC_MESSAGES/wtforms.po" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/wtforms/locale/nl/LC_MESSAGES/wtforms.mo" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/wtforms/locale/nl/LC_MESSAGES/wtforms.po" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/wtforms/locale/pl/LC_MESSAGES/wtforms.mo" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/wtforms/locale/pl/LC_MESSAGES/wtforms.po" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/wtforms/locale/pt/LC_MESSAGES/wtforms.mo" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/wtforms/locale/pt/LC_MESSAGES/wtforms.po" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/wtforms/locale/ru/LC_MESSAGES/wtforms.mo" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/wtforms/locale/ru/LC_MESSAGES/wtforms.po" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/wtforms/locale/uk/LC_MESSAGES/wtforms.mo" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/wtforms/locale/uk/LC_MESSAGES/wtforms.po" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/wtforms/locale/wtforms.pot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/wtforms/locale/zh/LC_MESSAGES/wtforms.mo" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/wtforms/locale/zh/LC_MESSAGES/wtforms.po" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/wtforms/locale/zh_TW/LC_MESSAGES/wtforms.mo" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/wtforms/locale/zh_TW/LC_MESSAGES/wtforms.po" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/wtforms/meta.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/wtforms/utils.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/wtforms/validators.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/wtforms/widgets/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/wtforms/widgets/core.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/wtforms/widgets/html5.py" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/markupsafe/_speedups.so" afterPath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/markupsafe/_speedups.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flask-env/local/bin" afterPath="$PROJECT_DIR$/flask-env/local/bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flask-env/local/include" afterPath="$PROJECT_DIR$/flask-env/local/include" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flask-env/local/lib" afterPath="$PROJECT_DIR$/flask-env/local/lib" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/master/swf/flashExport.swf" afterPath="$PROJECT_DIR$/static/master/swf/flashExport.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dxads.iml" afterPath="$PROJECT_DIR$/.idea/dxads.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/master/contact.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/master/mdata.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/master/tblprofile.html" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/master/LICENSE.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/master/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/master/blank.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/master/buttons.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/master/calendar.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/master/content-slider.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/master/dropzone.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/master/elements.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/master/email-confirmation.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/master/email-contrast.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/master/email-navbar.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/master/email-newsletter.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/master/email.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/master/error-404.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/master/error-500.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/master/faq.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/master/form-elements-2.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/master/form-elements.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/master/form-wizard.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/master/gallery.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/master/grid.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/master/inbox.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/master/invoice.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/master/jqgrid.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/master/jquery-ui.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/master/mobile-menu-1.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/master/mobile-menu-2.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/master/mobile-menu-3.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/master/nestable-list.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/master/pricing.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/master/profile.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/master/search.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/master/timeline.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/master/top-menu.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/master/treeview.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/master/two-menu-1.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/master/two-menu-2.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/master/typography.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/master/widgets.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/master/wysiwyg.html" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.py" afterPath="$PROJECT_DIR$/app.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_tests" afterPath="$PROJECT_DIR$/app_tests" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.py" afterPath="$PROJECT_DIR$/config.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dxads.pgsql" afterPath="$PROJECT_DIR$/dxads.pgsql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flask-env/bin/activate" afterPath="$PROJECT_DIR$/flask-env/bin/activate" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flask-env/bin/activate.csh" afterPath="$PROJECT_DIR$/flask-env/bin/activate.csh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flask-env/bin/activate.fish" afterPath="$PROJECT_DIR$/flask-env/bin/activate.fish" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flask-env/bin/easy_install" afterPath="$PROJECT_DIR$/flask-env/bin/easy_install" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flask-env/bin/easy_install-2.7" afterPath="$PROJECT_DIR$/flask-env/bin/easy_install-2.7" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flask-env/bin/flask" afterPath="$PROJECT_DIR$/flask-env/bin/flask" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flask-env/bin/pip" afterPath="$PROJECT_DIR$/flask-env/bin/pip" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flask-env/bin/pip2" afterPath="$PROJECT_DIR$/flask-env/bin/pip2" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flask-env/bin/pip2.7" afterPath="$PROJECT_DIR$/flask-env/bin/pip2.7" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flask-env/bin/python-config" afterPath="$PROJECT_DIR$/flask-env/bin/python-config" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flask-env/bin/wheel" afterPath="$PROJECT_DIR$/flask-env/bin/wheel" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/Flask-0.12.2.dist-info/RECORD" afterPath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/Flask-0.12.2.dist-info/RECORD" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/Jinja2-2.9.6.dist-info/LICENSE.txt" afterPath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/Jinja2-2.9.6.dist-info/LICENSE.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/Jinja2-2.9.6.dist-info/RECORD" afterPath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/Jinja2-2.9.6.dist-info/RECORD" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/MarkupSafe-1.0.dist-info/RECORD" afterPath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/MarkupSafe-1.0.dist-info/RECORD" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/Werkzeug-0.12.2.dist-info/LICENSE.txt" afterPath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/Werkzeug-0.12.2.dist-info/LICENSE.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/Werkzeug-0.12.2.dist-info/RECORD" afterPath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/Werkzeug-0.12.2.dist-info/RECORD" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/click-6.7.dist-info/RECORD" afterPath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/click-6.7.dist-info/RECORD" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/itsdangerous-0.24.dist-info/RECORD" afterPath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/itsdangerous-0.24.dist-info/RECORD" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/pip-9.0.1.dist-info/RECORD" afterPath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/pip-9.0.1.dist-info/RECORD" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/pkg_resources-0.0.0.dist-info/RECORD" afterPath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/pkg_resources-0.0.0.dist-info/RECORD" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/pkg_resources/_vendor/pyparsing.py" afterPath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/pkg_resources/_vendor/pyparsing.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/psycopg2-2.7.3.dist-info/RECORD" afterPath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/psycopg2-2.7.3.dist-info/RECORD" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/setuptools-36.2.7.dist-info/RECORD" afterPath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/setuptools-36.2.7.dist-info/RECORD" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/wheel-0.30.0a0.dist-info/RECORD" afterPath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/wheel-0.30.0a0.dist-info/RECORD" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/wheel/test/conftest.py" afterPath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/wheel/test/conftest.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/wheel/test/test_install.py" afterPath="$PROJECT_DIR$/flask-env/lib/python2.7/site-packages/wheel/test/test_install.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flask-env/pip-selfcheck.json" afterPath="$PROJECT_DIR$/flask-env/pip-selfcheck.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flask-wtf/docs/make.bat" afterPath="$PROJECT_DIR$/flask-wtf/docs/make.bat" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flask-wtf/setup.py" afterPath="$PROJECT_DIR$/flask-wtf/setup.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/master.py" afterPath="$PROJECT_DIR$/master.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/psqldb.py" afterPath="$PROJECT_DIR$/psqldb.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/client/css/animations.css" afterPath="$PROJECT_DIR$/static/client/css/animations.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/client/css/custom.css" afterPath="$PROJECT_DIR$/static/client/css/custom.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/client/css/style.css" afterPath="$PROJECT_DIR$/static/client/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/client/js/custom.js" afterPath="$PROJECT_DIR$/static/client/js/custom.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/client/js/template.js" afterPath="$PROJECT_DIR$/static/client/js/template.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/client/plugins/isotope/isotope.pkgd.min.js" afterPath="$PROJECT_DIR$/static/client/plugins/isotope/isotope.pkgd.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/client/plugins/jquery.appear.js" afterPath="$PROJECT_DIR$/static/client/plugins/jquery.appear.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/client/plugins/jquery.backstretch.min.js" afterPath="$PROJECT_DIR$/static/client/plugins/jquery.backstretch.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/client/plugins/modernizr.js" afterPath="$PROJECT_DIR$/static/client/plugins/modernizr.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/master/js/ace-editable.min.js" afterPath="$PROJECT_DIR$/static/master/js/ace-editable.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/master/js/jquery.inputlimiter.min.js" afterPath="$PROJECT_DIR$/static/master/js/jquery.inputlimiter.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/master/js/jquery.nestable.min.js" afterPath="$PROJECT_DIR$/static/master/js/jquery.nestable.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/master/js/jquery.ui.touch-punch.min.js" afterPath="$PROJECT_DIR$/static/master/js/jquery.ui.touch-punch.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/client/contact.html" afterPath="$PROJECT_DIR$/templates/client/contact.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/client/index.html" afterPath="$PROJECT_DIR$/templates/client/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/client/login.html" afterPath="$PROJECT_DIR$/templates/client/login.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/client/profile.html" afterPath="$PROJECT_DIR$/templates/client/profile.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/client/registration.html" afterPath="$PROJECT_DIR$/templates/client/registration.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/master/blank.html" afterPath="$PROJECT_DIR$/templates/master/blank.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/master/buttons.html" afterPath="$PROJECT_DIR$/templates/master/buttons.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/master/calendar.html" afterPath="$PROJECT_DIR$/templates/master/calendar.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/master/content-slider.html" afterPath="$PROJECT_DIR$/templates/master/content-slider.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/master/dropzone.html" afterPath="$PROJECT_DIR$/templates/master/dropzone.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/master/elements.html" afterPath="$PROJECT_DIR$/templates/master/elements.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/master/email.html" afterPath="$PROJECT_DIR$/templates/master/email.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/master/error-404.html" afterPath="$PROJECT_DIR$/templates/master/error-404.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/master/error-500.html" afterPath="$PROJECT_DIR$/templates/master/error-500.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/master/faq.html" afterPath="$PROJECT_DIR$/templates/master/faq.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/master/form-elements-2.html" afterPath="$PROJECT_DIR$/templates/master/form-elements-2.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/master/form-elements.html" afterPath="$PROJECT_DIR$/templates/master/form-elements.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/master/form-wizard.html" afterPath="$PROJECT_DIR$/templates/master/form-wizard.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/master/gallery.html" afterPath="$PROJECT_DIR$/templates/master/gallery.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/master/grid.html" afterPath="$PROJECT_DIR$/templates/master/grid.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/master/inbox.html" afterPath="$PROJECT_DIR$/templates/master/inbox.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/master/index.html" afterPath="$PROJECT_DIR$/templates/master/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/master/invoice.html" afterPath="$PROJECT_DIR$/templates/master/invoice.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/master/jqgrid.html" afterPath="$PROJECT_DIR$/templates/master/jqgrid.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/master/jquery-ui.html" afterPath="$PROJECT_DIR$/templates/master/jquery-ui.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/master/login.html" afterPath="$PROJECT_DIR$/templates/master/login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/master/mobile-menu-1.html" afterPath="$PROJECT_DIR$/templates/master/mobile-menu-1.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/master/mobile-menu-2.html" afterPath="$PROJECT_DIR$/templates/master/mobile-menu-2.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/master/mobile-menu-3.html" afterPath="$PROJECT_DIR$/templates/master/mobile-menu-3.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/master/nestable-list.html" afterPath="$PROJECT_DIR$/templates/master/nestable-list.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/master/pricing.html" afterPath="$PROJECT_DIR$/templates/master/pricing.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/master/profile.html" afterPath="$PROJECT_DIR$/templates/master/profile.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/master/search.html" afterPath="$PROJECT_DIR$/templates/master/search.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/master/tables.html" afterPath="$PROJECT_DIR$/templates/master/tables.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/master/timeline.html" afterPath="$PROJECT_DIR$/templates/master/timeline.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/master/top-menu.html" afterPath="$PROJECT_DIR$/templates/master/top-menu.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/master/two-menu-1.html" afterPath="$PROJECT_DIR$/templates/master/two-menu-1.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/master/two-menu-2.html" afterPath="$PROJECT_DIR$/templates/master/two-menu-2.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/master/typography.html" afterPath="$PROJECT_DIR$/templates/master/typography.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/master/widgets.html" afterPath="$PROJECT_DIR$/templates/master/widgets.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/master/wysiwyg.html" afterPath="$PROJECT_DIR$/templates/master/wysiwyg.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/user.py" afterPath="$PROJECT_DIR$/user.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -231,24 +72,12 @@
     <option name="PATCH_PATH" value="" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/master/login.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4230">
-              <caret line="235" column="165" lean-forward="false" selection-start-line="235" selection-start-column="165" selection-end-line="235" selection-end-column="165" />
-              <folding>
-                <element signature="e#1894#1900#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
+    <leaf>
       <file leaf-file-name="app.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
-              <caret line="69" column="78" lean-forward="false" selection-start-line="69" selection-start-column="78" selection-end-line="69" selection-end-column="78" />
+            <state relative-caret-position="399">
+              <caret line="302" column="15" lean-forward="false" selection-start-line="302" selection-start-column="15" selection-end-line="302" selection-end-column="15" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
               </folding>
@@ -256,77 +85,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/master/index.html">
+      <file leaf-file-name="client.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/master/client.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="39150">
-              <caret line="2175" column="4" lean-forward="false" selection-start-line="2175" selection-start-column="4" selection-end-line="2175" selection-end-column="4" />
+            <state relative-caret-position="198">
+              <caret line="190" column="30" lean-forward="true" selection-start-line="190" selection-start-column="30" selection-end-line="190" selection-end-column="30" />
               <folding>
-                <element signature="n#style#0;n#div#0;n#div#1;n#a#0;n#li#0;n#ul#0;n#li#1;n#ul#0;n#li#0;n#ul#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#1;n#a#0;n#li#1;n#ul#0;n#li#1;n#ul#0;n#li#0;n#ul#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#1;n#a#0;n#li#2;n#ul#0;n#li#1;n#ul#0;n#li#0;n#ul#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#1;n#a#0;n#li#3;n#ul#0;n#li#1;n#ul#0;n#li#0;n#ul#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="e#13474#13479#0" expanded="true" />
-                <element signature="e#15962#15967#0" expanded="true" />
-                <element signature="e#19744#19749#0" expanded="true" />
-                <element signature="e#19977#19982#0" expanded="true" />
-                <element signature="e#23158#23163#0" expanded="true" />
-                <element signature="e#26623#26629#0" expanded="true" />
-                <element signature="e#29110#29115#0" expanded="true" />
-                <element signature="e#34659#34665#1" expanded="true" />
-                <element signature="e#34865#34871#1" expanded="true" />
-                <element signature="e#35071#35077#1" expanded="true" />
-                <element signature="e#35278#35284#1" expanded="true" />
-                <element signature="e#35810#35816#0" expanded="true" />
-                <element signature="e#36084#36090#0" expanded="true" />
-                <element signature="e#36356#36362#0" expanded="true" />
-                <element signature="e#56062#56068#0" expanded="true" />
-                <element signature="e#56169#56175#0" expanded="true" />
-                <element signature="e#57242#57250#0" expanded="true" />
-                <element signature="e#59563#59571#0" expanded="true" />
-                <element signature="e#60798#60806#0" expanded="true" />
-                <element signature="e#62032#62040#0" expanded="true" />
-                <element signature="e#62693#62699#0" expanded="true" />
-                <element signature="e#62801#62807#0" expanded="true" />
-                <element signature="e#65056#65061#0" expanded="true" />
-                <element signature="e#66934#66939#0" expanded="true" />
-                <element signature="e#69191#69197#0" expanded="true" />
-                <element signature="e#69229#69235#0" expanded="true" />
-                <element signature="e#69236#69242#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tables.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates/master/tables.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="329" column="48" lean-forward="false" selection-start-line="329" selection-start-column="48" selection-end-line="329" selection-end-column="48" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="master.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/master.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="468">
-              <caret line="27" column="47" lean-forward="false" selection-start-line="27" selection-start-column="46" selection-end-line="27" selection-end-column="47" />
-              <folding>
-                <element signature="e#0#24#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="user.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/user.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="9" column="10" lean-forward="true" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
-              <folding>
-                <element signature="e#0#25#0" expanded="true" />
+                <element signature="n#thead#0;n#table#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#tr#1;n#form#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="e#5575#5581#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -337,43 +105,43 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>block</find>
-      <find>banner</find>
-      <find>{% block b</find>
       <find>{% block</find>
-      <find>Htmlcoder</find>
-      <find>Home</find>
-      <find>dbcon_obj</find>
-      <find>UI &amp;</find>
-      <find>Ace</find>
-      <find>company name</find>
-      <find>.html</find>
-      <find>table</find>
-      <find>url_for</find>
-      <find>32</find>
-      <find>form</find>
-      <find>i a</find>
-      <find>usernmae</find>
-      <find>avatar3</find>
-      <find>username</find>
-      <find>registration</find>
+      <find>{% block`</find>
+      <find>exca</find>
+      <find>rtmi</find>
+      <find>/head</find>
+      <find>detail</find>
+      <find>show-details-btn</find>
+      <find>rtml</find>
+      <find>on</find>
+      <find>pro</find>
+      <find>row</find>
+      <find>mas</find>
+      <find>master/index</find>
+      <find>member</find>
       <find>master_login</find>
-      <find>logout</find>
-      <find>'/master/'</find>
-      <find>tab</find>
-      <find>simp</find>
-      <find>assets</find>
-      <find>simple &amp;</find>
+      <find>comment</find>
+      <find>username</find>
+      <find>rtr</find>
+      <find>cda</find>
       <find>client</find>
-      <find>jason</find>
-      <find>rtmta</find>
+      <find>rtcd</find>
+      <find>rtc</find>
+      <find>cdata</find>
+      <find>rtmop</find>
+      <find>rtcda</find>
+      <find>&lt;/div</find>
+      <find>&lt;tab</find>
+      <find>&lt;div</find>
+      <find>ch</find>
+      <find>cli</find>
     </findStrings>
     <replaceStrings>
       <replace>dxads</replace>
@@ -402,20 +170,26 @@
         <option value="$PROJECT_DIR$/login.py" />
         <option value="$PROJECT_DIR$/app_tests.py" />
         <option value="$PROJECT_DIR$/static/client/demo.txt" />
-        <option value="$PROJECT_DIR$/app_tests" />
         <option value="$PROJECT_DIR$/templates/master/login.html" />
-        <option value="$PROJECT_DIR$/psqldb.py" />
         <option value="$PROJECT_DIR$/config.py" />
-        <option value="$PROJECT_DIR$/user.py" />
-        <option value="$PROJECT_DIR$/master.py" />
+        <option value="$PROJECT_DIR$/templates/client/registration.html" />
+        <option value="$PROJECT_DIR$/templates/master/mdata.html" />
+        <option value="$PROJECT_DIR$/app_tests" />
+        <option value="$PROJECT_DIR$/psqldb.py" />
         <option value="$PROJECT_DIR$/templates/client/contact.html" />
+        <option value="$PROJECT_DIR$/templates/master/d.html" />
         <option value="$PROJECT_DIR$/templates/client/index.html" />
         <option value="$PROJECT_DIR$/templates/client/login.html" />
         <option value="$PROJECT_DIR$/templates/client/profile.html" />
-        <option value="$PROJECT_DIR$/templates/client/registration.html" />
-        <option value="$PROJECT_DIR$/templates/master/index.html" />
+        <option value="$PROJECT_DIR$/templates/master/contact.html" />
+        <option value="$PROJECT_DIR$/master.py" />
+        <option value="$PROJECT_DIR$/templates/master/cdata.html" />
         <option value="$PROJECT_DIR$/templates/master/tables.html" />
+        <option value="$PROJECT_DIR$/user.py" />
+        <option value="$PROJECT_DIR$/templates/master/tblprofile.html" />
+        <option value="$PROJECT_DIR$/templates/master/client.html" />
         <option value="$PROJECT_DIR$/app.py" />
+        <option value="$PROJECT_DIR$/templates/master/index.html" />
       </list>
     </option>
   </component>
@@ -462,6 +236,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -478,13 +253,12 @@
               <item name="dxads" type="b2602c69:ProjectViewProjectNode" />
               <item name="dxads" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="master" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -639,6 +413,40 @@
       <option name="_new_target" value="&quot;&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
     </configuration>
+    <configuration name="app (2)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="$PROJECT_DIR$/flask-env/bin/python2.7" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="dxads" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/flask-wtf/examples/recaptcha/app.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
+    <configuration name="app (3)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="$PROJECT_DIR$/flask-env/bin/python2.7" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="dxads" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/flask-wtf/examples/uploadr/app.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
     <configuration name="app" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -656,7 +464,7 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <configuration name="config" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="flaskr" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -668,41 +476,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="dxads" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/config.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-    </configuration>
-    <configuration name="master" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="$PROJECT_DIR$/flask-env/bin/python2.7" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="dxads" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/master.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-    </configuration>
-    <configuration name="psqldb" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="$PROJECT_DIR$/flask-env/bin/python2.7" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="dxads" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/psqldb.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/flask-wtf/examples/flaskr/flaskr.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -726,18 +500,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.app" />
-      <item index="1" class="java.lang.String" itemvalue="Python.psqldb" />
-      <item index="2" class="java.lang.String" itemvalue="Python.user" />
-      <item index="3" class="java.lang.String" itemvalue="Python.config" />
-      <item index="4" class="java.lang.String" itemvalue="Python.master" />
+      <item index="1" class="java.lang.String" itemvalue="Python.flaskr" />
+      <item index="2" class="java.lang.String" itemvalue="Python.app (2)" />
+      <item index="3" class="java.lang.String" itemvalue="Python.app (3)" />
+      <item index="4" class="java.lang.String" itemvalue="Python.user" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Python.app" />
-        <item index="1" class="java.lang.String" itemvalue="Python.config" />
-        <item index="2" class="java.lang.String" itemvalue="Python.master" />
-        <item index="3" class="java.lang.String" itemvalue="Python.user" />
-        <item index="4" class="java.lang.String" itemvalue="Python.psqldb" />
+        <item index="1" class="java.lang.String" itemvalue="Python.user" />
+        <item index="2" class="java.lang.String" itemvalue="Python.app (3)" />
+        <item index="3" class="java.lang.String" itemvalue="Python.app (2)" />
+        <item index="4" class="java.lang.String" itemvalue="Python.flaskr" />
       </list>
     </recent_temporary>
   </component>
@@ -761,16 +535,16 @@
     <frame x="75" y="24" width="1303" height="780" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17140661" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17140661" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="WINDOWED" visible="false" show_stripe_button="true" weight="0.2912913" sideWeight="0.50269026" order="7" side_tool="true" content_ui="tabs" x="65" y="24" width="1301" height="744" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15615615" sideWeight="0.49730977" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1021021" sideWeight="0.49730977" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -787,17 +561,17 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="WINDOWED" visible="false" show_stripe_button="true" weight="0.2912913" sideWeight="0.50269026" order="7" side_tool="true" content_ui="tabs" x="65" y="24" width="1301" height="744" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14414415" sideWeight="0.49730977" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2912913" sideWeight="0.49730977" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17140661" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17140661" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32882884" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
@@ -811,76 +585,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/templates/client/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="17" column="21" lean-forward="true" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/client/layout.html" />
-    <entry file="file://$PROJECT_DIR$/psqldb.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index.html" />
-    <entry file="file://$PROJECT_DIR$/templates/login.html" />
-    <entry file="file://$PROJECT_DIR$/app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="15" column="8" lean-forward="false" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/login.py" />
-    <entry file="file://$PROJECT_DIR$/templates/login.html" />
-    <entry file="file://$PROJECT_DIR$/app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="35" column="31" lean-forward="false" selection-start-line="35" selection-start-column="31" selection-end-line="35" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/login.py" />
-    <entry file="file://$PROJECT_DIR$/app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/login.py" />
     <entry file="file://$PROJECT_DIR$/templates/client/login.html" />
     <entry file="file://$PROJECT_DIR$/login.py" />
@@ -889,9 +593,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="16" column="28" lean-forward="false" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -902,9 +603,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
           <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -912,9 +610,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
           <caret line="7" column="41" lean-forward="false" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -923,9 +618,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -933,9 +625,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -955,27 +644,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app_tests">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/master/inbox.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/psqldb.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="11" column="30" lean-forward="true" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/master/inbox.html" />
     <entry file="file://$PROJECT_DIR$/config.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
@@ -983,126 +652,170 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/master.py">
+    <entry file="file://$PROJECT_DIR$/tables.html" />
+    <entry file="file://$PROJECT_DIR$/app_tests">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="27" column="47" lean-forward="false" selection-start-line="27" selection-start-column="46" selection-end-line="27" selection-end-column="47" />
-          <folding>
-            <element signature="e#0#24#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="450">
+          <caret line="25" column="11" lean-forward="false" selection-start-line="25" selection-start-column="11" selection-end-line="25" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/master/d.html" />
+    <entry file="file://$PROJECT_DIR$/templates/master/mobile-menu-3.html" />
+    <entry file="file://$PROJECT_DIR$/templates/master/mdata.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="6" lean-forward="true" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/master/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="366">
+          <caret line="33" column="91" lean-forward="true" selection-start-line="32" selection-start-column="8" selection-end-line="33" selection-end-column="91" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/master/contact.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="169" column="80" lean-forward="false" selection-start-line="169" selection-start-column="80" selection-end-line="169" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dxads.pgsql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/psqldb.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/client/contact.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="16" lean-forward="false" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="16" />
+        <state relative-caret-position="1062">
+          <caret line="59" column="59" lean-forward="true" selection-start-line="59" selection-start-column="59" selection-end-line="59" selection-end-column="59" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/client/registration.html">
+    <entry file="file://$PROJECT_DIR$/templates/client/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="20" lean-forward="false" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="20" />
+        <state relative-caret-position="-90">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/client/profile.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
-          <caret line="7" column="18" lean-forward="false" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
+          <caret line="7" column="25" lean-forward="true" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/client/login.html">
+    <entry file="file://$PROJECT_DIR$/templates/client/registration.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="20" lean-forward="false" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
+        <state relative-caret-position="576">
+          <caret line="32" column="29" lean-forward="true" selection-start-line="32" selection-start-column="29" selection-end-line="32" selection-end-column="29" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/flask-wtf/examples/flaskr/flaskr.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flask-wtf/examples/recaptcha/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flask-wtf/examples/uploadr/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flask-wtf/examples/babel/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/master.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="65">
+          <caret line="55" column="39" lean-forward="true" selection-start-line="55" selection-start-column="39" selection-end-line="55" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/master/cdata.html" />
     <entry file="file://$PROJECT_DIR$/templates/client/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="39">
-          <caret line="3" column="18" lean-forward="true" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
+        <state relative-caret-position="137">
+          <caret line="104" column="76" lean-forward="false" selection-start-line="104" selection-start-column="73" selection-end-line="104" selection-end-column="76" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/master/index.html">
+    <entry file="file://$PROJECT_DIR$/templates/master/tables.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="39150">
-          <caret line="2175" column="4" lean-forward="false" selection-start-line="2175" selection-start-column="4" selection-end-line="2175" selection-end-column="4" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#1;n#a#0;n#li#0;n#ul#0;n#li#1;n#ul#0;n#li#0;n#ul#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#a#0;n#li#1;n#ul#0;n#li#1;n#ul#0;n#li#0;n#ul#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#a#0;n#li#2;n#ul#0;n#li#1;n#ul#0;n#li#0;n#ul#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#a#0;n#li#3;n#ul#0;n#li#1;n#ul#0;n#li#0;n#ul#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#13474#13479#0" expanded="true" />
-            <element signature="e#15962#15967#0" expanded="true" />
-            <element signature="e#19744#19749#0" expanded="true" />
-            <element signature="e#19977#19982#0" expanded="true" />
-            <element signature="e#23158#23163#0" expanded="true" />
-            <element signature="e#26623#26629#0" expanded="true" />
-            <element signature="e#29110#29115#0" expanded="true" />
-            <element signature="e#34659#34665#1" expanded="true" />
-            <element signature="e#34865#34871#1" expanded="true" />
-            <element signature="e#35071#35077#1" expanded="true" />
-            <element signature="e#35278#35284#1" expanded="true" />
-            <element signature="e#35810#35816#0" expanded="true" />
-            <element signature="e#36084#36090#0" expanded="true" />
-            <element signature="e#36356#36362#0" expanded="true" />
-            <element signature="e#56062#56068#0" expanded="true" />
-            <element signature="e#56169#56175#0" expanded="true" />
-            <element signature="e#57242#57250#0" expanded="true" />
-            <element signature="e#59563#59571#0" expanded="true" />
-            <element signature="e#60798#60806#0" expanded="true" />
-            <element signature="e#62032#62040#0" expanded="true" />
-            <element signature="e#62693#62699#0" expanded="true" />
-            <element signature="e#62801#62807#0" expanded="true" />
-            <element signature="e#65056#65061#0" expanded="true" />
-            <element signature="e#66934#66939#0" expanded="true" />
-            <element signature="e#69191#69197#0" expanded="true" />
-            <element signature="e#69229#69235#0" expanded="true" />
-            <element signature="e#69236#69242#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/master/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4230">
-          <caret line="235" column="165" lean-forward="false" selection-start-line="235" selection-start-column="165" selection-end-line="235" selection-end-column="165" />
-          <folding>
-            <element signature="e#1894#1900#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="407">
+          <caret line="2054" column="8" lean-forward="false" selection-start-line="2054" selection-start-column="8" selection-end-line="2287" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/user.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="10" lean-forward="true" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="271">
+          <caret line="97" column="75" lean-forward="false" selection-start-line="97" selection-start-column="75" selection-end-line="97" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/master/tblprofile.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-731">
+          <caret line="25" column="7" lean-forward="true" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/master/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="640" column="36" lean-forward="true" selection-start-line="640" selection-start-column="36" selection-end-line="640" selection-end-column="36" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="69" column="78" lean-forward="false" selection-start-line="69" selection-start-column="78" selection-end-line="69" selection-end-column="78" />
+        <state relative-caret-position="399">
+          <caret line="302" column="15" lean-forward="false" selection-start-line="302" selection-start-column="15" selection-end-line="302" selection-end-column="15" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/master/tables.html">
+    <entry file="file://$PROJECT_DIR$/templates/master/client.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="329" column="48" lean-forward="false" selection-start-line="329" selection-start-column="48" selection-end-line="329" selection-end-column="48" />
-          <folding />
+        <state relative-caret-position="198">
+          <caret line="190" column="30" lean-forward="true" selection-start-line="190" selection-start-column="30" selection-end-line="190" selection-end-column="30" />
+          <folding>
+            <element signature="n#thead#0;n#table#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#tr#1;n#form#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="e#5575#5581#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

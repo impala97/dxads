@@ -1,5 +1,5 @@
 from __future__ import with_statement
-from flask import (Flask, session, redirect, url_for, abort,render_template, flash, request, make_response)
+from flask import (Flask, session, redirect, url_for,render_template, flash, request, make_response)
 import os,numbers
 from user import user
 from master import master
@@ -36,15 +36,18 @@ def rtcontact():
 @app.route('/profile')
 def rtprofile():
     data = {'title': 'Client | Profile'}
-    return render_template('client/profile.html',**data)
+    row = user_obj.getProfileData(config.__id__)
+    print row
+    return render_template('client/profile.html',udata=row,**data)
 
 
 @app.route('/logout')
 def logout():
-    session['logged_in'] = 0
-    flash(message='You were logged out')
-    del config.__id__, config.__email__, config.__username__
-    return render_template('client/login.html')
+    if user_obj.update_logout(config.__id__) is True :
+        session['logged_in'] = 0
+        flash(message='You were logged out')
+        del config.__id__, config.__email__, config.__username__
+        return render_template('client/login.html')
 
 
 @app.route('/registration')
@@ -53,10 +56,10 @@ def rtregister():
     return render_template('client/registration.html',**data)
 
 
-@app.route('/master/index')
-def rtmindex():
-    data = {'title' : 'Master | Home'}
-    return render_template('/master/index.html', **data)
+@app.route('/master/')
+def rtmlogin():
+    data = {'title' : 'Master | Login'}
+    return render_template('/master/login.html',**data)
 
 
 @app.route('/master/registration')
@@ -64,23 +67,46 @@ def rtmregister():
     return redirect('master/login.html')
 
 
+@app.route('/master/index')
+def rtmindex(operation=None):
+    title = "Master | Home"
+    contact = user_obj.getContactData()
+    chat = master().getChatData()
+    return render_template('/master/index.html', username=master.__username__,contact=contact,chat=chat,title=title)
+
+
+@app.route('/master/index',methods=['GET','POST'])
+def rtmchat():
+    if request.method == 'POST':
+        print request.form['msg_txt']
+        if request.form['msg_txt'] is not None:
+            if master().addChat(request.form['msg_txt']):
+                return redirect(url_for('rtmindex'))
+
+
 @app.route('/master/tables')
 def rtmtables():
-    data = {'title': 'Master | Tables'}
-    return render_template('/master/tables.html',username=config.__username__,**data)
+    title = "Master | Tables"
+    return render_template('/master/tables.html',username=master.__username__, title=title)
+
+
+
+
+@app.route('/master/master')
+def rtmdata():
+    title = "Master | Master Data"
+    data = master().getMasterTableData()
+    return render_template('/master/mdata.html',username=master.__username__,title=title,data=data)
 
 
 @app.route('/master/logout')
 def master_logout():
-    session['logged_in'] = 0
-    flash(message='You were logger out')
-    del config.__id__,config.__email__,config.__username__
-    return url_for('rtmlogin')
+    if master().update_logout() is True:
+        session['logged_in'] = 0
+        flash(message='You were logger out')
+        del config.__id__,config.__email__,config.__username__
+        return url_for('rtmlogin')
 
-
-@app.route('/master/')
-def rtmlogin():
-    return render_template('/master/login.html')
 
 #-------------------LoginPage------------------------------
 @app.route('/login',endpoint='login', methods=['POST'])
@@ -93,11 +119,12 @@ def login():
             return render_template('client/login.html')
         elif row[0][1] == request.form['un_txt'] :
             if row[0][2] == request.form['pwd_txt']:
-                session['logged_in'] = 1
-                print row[0][0]
-                config.__id__ = row[0][0]
-                config.__username__ = row[0][1]
-                return redirect(url_for('rtindex'))
+                if user_obj.update_login(row[0][0]) is True:
+                    session['logged_in'] = 1
+                    config.__id__ = row[0][0]
+                    config.__username__ = row[0][1]
+                    config.__email__ = user_obj.__getEmail__(row[0][0])
+                    return redirect(url_for('rtindex'))
             else:
                 flash(message='Password Does not match.')
                 return render_template('client/login.html')
@@ -120,7 +147,7 @@ def reg_contact():
 
         if flag is True:
             flash(message='inserted successfully.')
-            return render_template('client/contact.html')
+            return redirect(url_for('rtcontact'))
 
 
 #---------------------ProfilePage------------------
@@ -155,8 +182,6 @@ def update_profile():
 
 
 #------------------RegistrationPage-----------------------------
-
-
 @app.route('/registration',methods=['GET','POST'])
 def register():
     if request.method == 'POST':
@@ -179,6 +204,7 @@ def register():
                 elif isinstance(error_msg,numbers.Integral) is True:
                     config.__id__ = error_msg
                     config.__username__ = username
+                    config.__email__ = None
 
 
                 return render_template('client/index.html')
@@ -198,7 +224,6 @@ def master_login():
     if request.method == 'POST' :
         row = master().do_login(username=request.form['un_txt'])
 
-
         if row is False:
             flash(message='User Does not exist.')
             return render_template('master/login.html')
@@ -208,18 +233,18 @@ def master_login():
             return render_template('master/login.html')
         elif row[0][1] == request.form['un_txt'] :
             if row[0][2] == request.form['pwd_txt']:
-                session['logged_in'] = 1
-                config.__id__ = row[0][0]
-                config.__username__ = row[0][1]
-                config.__email__ = row[0][3 ]
-                return render_template('master/index.html',username=config.__username__)
+                master.__username__ = request.form['un_txt']
+                master.__id__ = master().__getId__()
+                print master.__username__
+                if master().update_login() is True:
+                    session['logged_in'] = 1
+                    return redirect(url_for('rtmindex'))
             else:
                 flash(message='Password Does not match.')
                 return render_template('master/login.html')
         else:
             flash(message='Invalid username')
             return render_template('master/login.html')
-
 
 #----------------------Registration--------------
 
@@ -240,18 +265,43 @@ def master_register():
             else:
                 error_msg = master().add_master(username, pwd, email)
 
-
                 print error_msg
                 if isinstance(error_msg,basestring) is True:
                     flash(message=error_msg)
                 else:
                     session['logged_in'] = 1
-
                 return redirect(url_for('rtmlogin'))
         else:
             flash(message='Enter valid data.')
             return render_template('master/index.html')
 
+
+#-------------------client data manipulation -------------------------
+@app.route('/master/client/login')
+def rtmclient():
+    title = "Master | Client Data"
+    data = user().getClientTableData()
+    return render_template('/master/client.html', username=master.__username__, title=title, data=data)
+
+
+@app.route('/master/client/login', methods=['GET','POST'])
+def client():
+    user().InactiveClient(2)
+    return redirect(url_for('rtmclient'))
+
+def update():
+    id = request.form['id']
+    name = request.form['name']
+    pwd = request.form['password']
+    active = request.form['active']
+    rslt = user().updateClient(id,name,pwd,active)
+    return redirect(url_for('rtmclient'))
+
+@app.route('/master/client/profile')
+def rtmtblprofile():
+    title = "Master | Client Profile Data"
+    data = user().getClientTableData()
+    return render_template('/master/tblprofile.html', username=master.__username__, title=title, data=data)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000 , debug=True)

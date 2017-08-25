@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+		{% block head %}
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 		<meta charset="utf-8" />
 		<title>{{ title }}</title>
+		{% block meta %}
+			<meta name="description" content="overview &amp; stats" />
+			<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+		{% endblock %}
 
-		<meta name="description" content="overview &amp; stats" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-
+		{% block css %}
 		<!-- bootstrap & fontawesome -->
 		<link rel="stylesheet" href="{{ url_for('static',filename='master/css/bootstrap.min.css') }}" />
 		<link rel="stylesheet" href="{{ url_for('static',filename='master/font-awesome/4.5.0/css/font-awesome.min.css') }}" />
@@ -40,10 +43,12 @@
 		<!--[if lte IE 8]>
 		<script src="{{ url_for('static',filename='master/js/html5shiv.min.js') }}"></script>
 		<script src="{{ url_for('static',filename='master/js/respond.min.js') }}"></script>
-		<![endif]-->
+		<![endif]-->{% endblock %}
+		{% endblock %}
 	</head>
 
 	<body class="no-skin">
+	{% block body %}
 		<div id="navbar" class="navbar navbar-default ace-save-state">
 			<div class="navbar-container ace-save-state" id="navbar-container">
 				<button type="button" class="navbar-toggle menu-toggler pull-left" id="menu-toggler" data-target="#sidebar">
@@ -57,10 +62,10 @@
 				</button>
 
 				<div class="navbar-header pull-left">
-					<a href="index.html" class="navbar-brand">
+					<a href="{{ url_for('rtmindex',username=username) }}" class="navbar-brand">
 						<small>
 							<i class="fa fa-leaf"></i>
-							Ace Admin
+							Digital Advertisement Admin
 						</small>
 					</a>
 				</div>
@@ -200,7 +205,7 @@
 												</div>
 											</a>
 										</li>
-									</ul>
+										</ul>
 								</li>
 
 								<li class="dropdown-footer">
@@ -625,14 +630,37 @@
 							<li class="">
 								<a href="{{ url_for('rtmtables') }}">
 									<i class="menu-icon fa fa-caret-right"></i>
+									Tables
+								</a>
+							</li>
+							<li class="">
+								<a href="#" class="dropdown-toggle">
+									<i class="menu-icon fa fa-caret-right"></i>
 									Client
+									<b class="arrow fa fa-angle-down"></b>
 								</a>
 
 								<b class="arrow"></b>
+								<ul class="submenu">
+								<li class="">
+									<a href="{{ url_for('rtmclient') }}">
+										<i class="menu-icon fa fa-caret-right"></i>
+										Login
+									</a>
+								</li>
+								<li class="">
+									<a href="{{ url_for('rtmtblprofile') }}">
+										<i class="menu-icon fa fa-caret-right"></i>
+										Profile
+									</a>
+
+									<b class="arrow"></b>
+								</li>
+								</ul>
 							</li>
 
 							<li class="">
-								<a href="{{ url_for('static',filename='master/jqgrid') }}">
+								<a href="{{ url_for('rtmdata') }}">
 									<i class="menu-icon fa fa-caret-right"></i>
 									Master
 								</a>
@@ -960,7 +988,7 @@
 
 								<div class="pull-left width-50">
 									<div class="ace-settings-item">
-										<input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-hover" autocomplete="off" />
+										<input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-hover" autocomplete="off" checked />
 										<label class="lbl" for="ace-settings-hover"> Submenu on Hover</label>
 									</div>
 
@@ -985,11 +1013,13 @@
 									overview &amp; stats
 								</small>
 							</h1>
-						</div><!-- /.page-header -->
-
+						</div>
+						{% endblock %}<!-- /.page-header -->
+						{% block content %}
 						<div class="row">
 							<div class="col-xs-12">
 								<!-- PAGE CONTENT BEGINS -->
+
 								<div class="alert alert-block alert-success">
 									<button type="button" class="close" data-dismiss="alert">
 										<i class="ace-icon fa fa-times"></i>
@@ -999,10 +1029,10 @@
 
 									Welcome to
 									<strong class="green">
-										Ace
+										Digital Marketing
 										<small>(v1.4)</small>
 									</strong>,
-	SR_MEHTA<a href="#">github</a> (with minified ace js/css files).
+						SR_MEHTA <a href="#">github</a> (with minified ace js/css files).
 								</div>
 
 								<div class="row">
@@ -1376,7 +1406,7 @@
 														</li>
 
 														<li>
-															<a data-toggle="tab" href="#comment-tab">Comments</a>
+															<a data-toggle="tab" href="#comment-tab">Contact Us</a>
 														</li>
 													</ul>
 												</div>
@@ -1773,6 +1803,7 @@
 
 														<div id="comment-tab" class="tab-pane">
 															<div class="comments">
+																{% for r in range((contact|length)-1,0,-1) %}
 																<div class="itemdiv commentdiv">
 																	<div class="user">
 																		<img alt="Bob Doe's Avatar" src="{{ url_for('static',filename='master/images/avatars/avatar.png') }}" />
@@ -1780,17 +1811,17 @@
 
 																	<div class="body">
 																		<div class="name">
-																			<a href="#">Bob Doe</a>
+																			<a href="#">{{ contact[r][1] }} | {{ contact[r][2] }}</a>
 																		</div>
 
 																		<div class="time">
 																			<i class="ace-icon fa fa-clock-o"></i>
-																			<span class="green">6 min</span>
+																			<span class="green">{{ contact[r][4] }}</span>
 																		</div>
 
 																		<div class="text">
 																			<i class="ace-icon fa fa-quote-left"></i>
-																			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque commodo massa sed ipsum porttitor facilisis &hellip;
+																			{{ contact[r][3] }}
 																		</div>
 																	</div>
 
@@ -1828,108 +1859,7 @@
 																		</div>
 																	</div>
 																</div>
-
-																<div class="itemdiv commentdiv">
-																	<div class="user">
-																		<img alt="Jennifer's Avatar" src="{{ url_for('static',filename='master/images/avatars/avatar1.png') }}" />
-																	</div>
-
-																	<div class="body">
-																		<div class="name">
-																			<a href="#">Jennifer</a>
-																		</div>
-
-																		<div class="time">
-																			<i class="ace-icon fa fa-clock-o"></i>
-																			<span class="blue">15 min</span>
-																		</div>
-
-																		<div class="text">
-																			<i class="ace-icon fa fa-quote-left"></i>
-																			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque commodo massa sed ipsum porttitor facilisis &hellip;
-																		</div>
-																	</div>
-
-																	<div class="tools">
-																		<div class="action-buttons bigger-125">
-																			<a href="#">
-																				<i class="ace-icon fa fa-pencil blue"></i>
-																			</a>
-
-																			<a href="#">
-																				<i class="ace-icon fa fa-trash-o red"></i>
-																			</a>
-																		</div>
-																	</div>
-																</div>
-
-																<div class="itemdiv commentdiv">
-																	<div class="user">
-																		<img alt="Joe's Avatar" src="{{ url_for('static',filename='master/images/avatars/avatar2.png') }}" />
-																	</div>
-
-																	<div class="body">
-																		<div class="name">
-																			<a href="#">Joe</a>
-																		</div>
-
-																		<div class="time">
-																			<i class="ace-icon fa fa-clock-o"></i>
-																			<span class="orange">22 min</span>
-																		</div>
-
-																		<div class="text">
-																			<i class="ace-icon fa fa-quote-left"></i>
-																			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque commodo massa sed ipsum porttitor facilisis &hellip;
-																		</div>
-																	</div>
-
-																	<div class="tools">
-																		<div class="action-buttons bigger-125">
-																			<a href="#">
-																				<i class="ace-icon fa fa-pencil blue"></i>
-																			</a>
-
-																			<a href="#">
-																				<i class="ace-icon fa fa-trash-o red"></i>
-																			</a>
-																		</div>
-																	</div>
-																</div>
-
-																<div class="itemdiv commentdiv">
-																	<div class="user">
-																		<img alt="Rita's Avatar" src="{{ url_for('static',filename='master/images/avatars/avatar3.png') }}" />
-																	</div>
-
-																	<div class="body">
-																		<div class="name">
-																			<a href="#">Rita</a>
-																		</div>
-
-																		<div class="time">
-																			<i class="ace-icon fa fa-clock-o"></i>
-																			<span class="red">50 min</span>
-																		</div>
-
-																		<div class="text">
-																			<i class="ace-icon fa fa-quote-left"></i>
-																			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque commodo massa sed ipsum porttitor facilisis &hellip;
-																		</div>
-																	</div>
-
-																	<div class="tools">
-																		<div class="action-buttons bigger-125">
-																			<a href="#">
-																				<i class="ace-icon fa fa-pencil blue"></i>
-																			</a>
-
-																			<a href="#">
-																				<i class="ace-icon fa fa-trash-o red"></i>
-																			</a>
-																		</div>
-																	</div>
-																</div>
+																{% endfor %}
 															</div>
 
 															<div class="hr hr8"></div>
@@ -1964,21 +1894,26 @@
 											<div class="widget-body">
 												<div class="widget-main no-padding">
 													<div class="dialogs">
+														{% for r in range(0,chat|length) %}
 														<div class="itemdiv dialogdiv">
 															<div class="user">
-																<img alt="Alexa's Avatar" src="{{ url_for('static',filename='master/images/avatars/avatar1.png') }}" />
+																{% if chat[r][1] == 'bhavik1991' %}
+																<img alt="Avatar4" src="{{ url_for('static',filename='master/images/avatars/avatar4.png') }}" />
+																{% elif chat[r][1] == 'srmehta' %}
+																<img alt="Avatar5" src="{{ url_for('static',filename='master/images/avatars/avatar5.png') }}" />
+																{% endif %}
 															</div>
 
 															<div class="body">
 																<div class="time">
 																	<i class="ace-icon fa fa-clock-o"></i>
-																	<span class="green">4 sec</span>
+																	<span class="green">{{ chat[r][3] }}</span>
 																</div>
 
 																<div class="name">
-																	<a href="#">Alexa</a>
+																	<a href="#">{{ chat[r][1] }}</a>
 																</div>
-																<div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque commodo massa sed ipsum porttitor facilisis.</div>
+																<div class="text">{{ chat[r][2] }}</div>
 
 																<div class="tools">
 																	<a href="#" class="btn btn-minier btn-info">
@@ -1987,109 +1922,13 @@
 																</div>
 															</div>
 														</div>
-
-														<div class="itemdiv dialogdiv">
-															<div class="user">
-																<img alt="John's Avatar" src="{{ url_for('static',filename='master/images/avatars/avatar.png') }}" />
-															</div>
-
-															<div class="body">
-																<div class="time">
-																	<i class="ace-icon fa fa-clock-o"></i>
-																	<span class="blue">38 sec</span>
-																</div>
-
-																<div class="name">
-																	<a href="#">John</a>
-																</div>
-																<div class="text">Raw denim you probably haven&#39;t heard of them jean shorts Austin.</div>
-
-																<div class="tools">
-																	<a href="#" class="btn btn-minier btn-info">
-																		<i class="icon-only ace-icon fa fa-share"></i>
-																	</a>
-																</div>
-															</div>
-														</div>
-
-														<div class="itemdiv dialogdiv">
-															<div class="user">
-																<img alt="Bob's Avatar" src="{{ url_for('static',filename='master/images/avatars/user.jpg') }}" />
-															</div>
-
-															<div class="body">
-																<div class="time">
-																	<i class="ace-icon fa fa-clock-o"></i>
-																	<span class="orange">2 min</span>
-																</div>
-
-																<div class="name">
-																	<a href="#">Bob</a>
-																	<span class="label label-info arrowed arrowed-in-right">admin</span>
-																</div>
-																<div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque commodo massa sed ipsum porttitor facilisis.</div>
-
-																<div class="tools">
-																	<a href="#" class="btn btn-minier btn-info">
-																		<i class="icon-only ace-icon fa fa-share"></i>
-																	</a>
-																</div>
-															</div>
-														</div>
-
-														<div class="itemdiv dialogdiv">
-															<div class="user">
-																<img alt="Jim's Avatar" src="{{ url_for('static',filename='master/images/avatars/avatar4.png') }}" />
-															</div>
-
-															<div class="body">
-																<div class="time">
-																	<i class="ace-icon fa fa-clock-o"></i>
-																	<span class="grey">3 min</span>
-																</div>
-
-																<div class="name">
-																	<a href="#">Jim</a>
-																</div>
-																<div class="text">Raw denim you probably haven&#39;t heard of them jean shorts Austin.</div>
-
-																<div class="tools">
-																	<a href="#" class="btn btn-minier btn-info">
-																		<i class="icon-only ace-icon fa fa-share"></i>
-																	</a>
-																</div>
-															</div>
-														</div>
-
-														<div class="itemdiv dialogdiv">
-															<div class="user">
-																<img alt="Alexa's Avatar" src="{{ url_for('static',filename='master/images/avatars/avatar1.png') }}" />
-															</div>
-
-															<div class="body">
-																<div class="time">
-																	<i class="ace-icon fa fa-clock-o"></i>
-																	<span class="green">4 min</span>
-																</div>
-
-																<div class="name">
-																	<a href="#">Alexa</a>
-																</div>
-																<div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-
-																<div class="tools">
-																	<a href="#" class="btn btn-minier btn-info">
-																		<i class="icon-only ace-icon fa fa-share"></i>
-																	</a>
-																</div>
-															</div>
-														</div>
+														{% endfor %}
 													</div>
 
-													<form>
+													<form action="{{ url_for('rtmchat') }}" method="POST">
 														<div class="form-actions">
 															<div class="input-group">
-																<input placeholder="Type your message here ..." type="text" class="form-control" name="message" />
+																<input placeholder="Type your message here ..." type="text" class="form-control" name="msg_txt" id="msg_txt" required/>
 																<span class="input-group-btn">
 																	<button class="btn btn-sm btn-info no-radius" type="button">
 																		<i class="ace-icon fa fa-share"></i>
@@ -2104,14 +1943,14 @@
 										</div><!-- /.widget-box -->
 									</div><!-- /.col -->
 								</div><!-- /.row -->
-
 								<!-- PAGE CONTENT ENDS -->
 							</div><!-- /.col -->
 						</div><!-- /.row -->
 					</div><!-- /.page-content -->
 				</div>
 			</div><!-- /.main-content -->
-
+			{% endblock %}
+			{% block footer %}
 			<div class="footer">
 				<div class="footer-inner">
 					<div class="footer-content">
@@ -2142,7 +1981,9 @@
 				<i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
 			</a>
 		</div><!-- /.main-container -->
+		{% endblock %}
 
+	{% block scripts %}
 		<!-- basic scripts -->
 
 		<!--[if !IE]> -->
@@ -2152,28 +1993,17 @@
 
 		<!--[if IE]>
 		<script src="{{ url_for('static',filename='master/js/jquery-1.11.3.min.js') }}"></script>
-<![endif]-->
-		<script type="text/javascript">
-			if('ontouchstart' in document.documentElement) document.write("<script src='master/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
-		</script>
-		<script src="{{ url_for('static',filename='master/js/bootstrap.min.js') }}"></script>
-
-		<!-- page specific plugin scripts -->
-
-		<!--[if lte IE 8]>
-		  <script src="{{ url_for('static',filename='master/js/excanvas.min.js') }}"></script>
 		<![endif]-->
-		<script src="{{ url_for('static',filename='master/js/jquery-ui.custom.min.js') }}"></script>
-		<script src="{{ url_for('static',filename='master/js/jquery.ui.touch-punch.min.js') }}"></script>
-		<script src="{{ url_for('static',filename='master/js/jquery.easypiechart.min.js') }}"></script>
-		<script src="{{ url_for('static',filename='master/js/jquery.sparkline.index.min.js') }}"></script>
-		<script src="{{ url_for('static',filename='master/js/jquery.flot.min.js') }}"></script>
-		<script src="{{ url_for('static',filename='master/js/jquery.flot.pie.min.js') }}"></script>
-		<script src="{{ url_for('static',filename='master/js/jquery.flot.resize.min.js') }}"></script>
+		<script type="text/javascript">
+			if('ontouchstart' in document.documentElement) document.write("<script src='{{ url_for('static',filename='master/js/jquery.mobile.custom.min.js') }}'>"+"<"+"/script>");
+		</script>
 
+		<script src="{{ url_for('static',filename='master/js/bootstrap.min.js') }}"></script>
 		<!-- ace scripts -->
 		<script src="{{ url_for('static',filename='master/js/ace-elements.min.js') }}"></script>
 		<script src="{{ url_for('static',filename='master/js/ace.min.js') }}"></script>
+
+
 
 		<!-- inline scripts related to this page -->
 		<script type="text/javascript">
@@ -2394,5 +2224,19 @@
 			
 			})
 		</script>
-	</body>
+
+	<!-- page specific plugin scripts -->
+
+		<!--[if lte IE 8]>
+		  <script src="{{ url_for('static',filename='master/js/excanvas.min.js') }}"></script>
+		<![endif]-->
+		<script src="{{ url_for('static',filename='master/js/jquery-ui.custom.min.js') }}"></script>
+		<script src="{{ url_for('static',filename='master/js/jquery.ui.touch-punch.min.js') }}"></script>
+		<script src="{{ url_for('static',filename='master/js/jquery.easypiechart.min.js') }}"></script>
+		<script src="{{ url_for('static',filename='master/js/jquery.sparkline.index.min.js') }}"></script>
+		<script src="{{ url_for('static',filename='master/js/jquery.flot.min.js') }}"></script>
+		<script src="{{ url_for('static',filename='master/js/jquery.flot.pie.min.js') }}"></script>
+		<script src="{{ url_for('static',filename='master/js/jquery.flot.resize.min.js') }}"></script>
+		{% endblock %}
+ 	</body>
 </html>

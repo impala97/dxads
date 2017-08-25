@@ -1,7 +1,6 @@
 import psycopg2 as db
 import sys
 
-
 class dbcon():
     global con
     con = db.connect(dbname='dxads', host='localhost', user='srmehta', password='root')

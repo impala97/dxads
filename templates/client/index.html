@@ -7,16 +7,12 @@
 	<head>
 		{% block head %}
 		<meta charset="utf-8">
-		<title>{% block title%}{{ title }}{% endblock %}</title>
+		<title>{% block title %}{{ title }}{% endblock %}</title>
 		<meta name="description" content="Digital Marketing | Advertisement | Brand Developing">
 		<meta name="author" content="sr_mehta@ITMCS">
 
 		<!-- Mobile Meta -->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-		<!-- Favicon -->
-
-
 
 		<!-- Web Fonts -->
 		<link href="{{ url_for('static',filename='client/css/googleapis1.css') }}" rel='stylesheet' type='text/css'>
@@ -159,7 +155,7 @@
 		</div>
 		{% endblock%}
 		<!-- banner end -->
-		{% block content%}
+		{% block content %}
 		<!-- About section start -->
 		<!-- ================ -->
 		<div class="section clearfix object-non-visible" data-animation-effect="fadeIn">

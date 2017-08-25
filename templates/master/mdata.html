@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+</head>
+<body>
+Welcome! <h1>{{ username }}</h1> you are sign in as Admin.<br />
+You Have {{ data|length }} Tables in your client database.<br />
+<br />
+{% for i in range(0,(data|length) - 1) %}
+    <h2>{{ data[1][i][1] }}</h2>
+    {% for j in range(0,data[i]|length) %}
+        {% for k in range(0,data[i][j]|length) %}
+            <input type="text" value="{{ data[i][j][k] }}" readonly/>
+        {% endfor %}<br />
+    {% endfor %}<br />
+{% endfor %}
+</body>
+</html>
