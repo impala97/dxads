@@ -1,41 +1,52 @@
-client side controller
+
+
+
+						<input type="submit" name="update_btn" class="btn btn-default" id="update_txt" value="Update" onclick="validate()" />
+
+#########client side controller###############
+#########for client UI####################
 rtindex - redirect to client index page
 rtlogin - redirect to client login page
 rtcontact - redirect to client contact page
 rtprofile - redirect to client profile page
-rtregister - redirect to client register page
 logout - logic of client logout page
 
+
+#################core logic##############
 login - logic of client login
 reg_contact - logic of client feedback
 update_profile - logic of client profile page
 register - logic client registration
 
 
-master side controller
-rtmlogin - redirect to master login page
-rtmregister - redirect to master registration page
+###############master side controller############
+#########for client UI####################
 rtmindex - redirect to master index page
 rtmchat - logic of chat funcationality at master page
 rtmtables - redirect to master template tables demo page
 rtmdata - redirect to display master's side table data
 master_logout - logic of master logout page
 
-master_login - logic master login
-master_register - logic master registration
+
+#################core logic##############
 rtclient - logic to display client login table data
 active - logic of active button at rtclient
 delete - logic of delete button at rtclient
 rtmupdate - redirect to update client login details page
 update - logic of update client user details
 rtmtblprofile - redirect to display client profile table data
-tblporfile -redirect to update client profile detials page
-
+tblporfile - redirect to update client profile detials page
+UpdateProfile - logic of update client profile details page
 
 
 2.change/password
 3.session management
 4.admin side show table  insert,update,delete
+
+
+def rtmlogin():
+    data = {'title' : 'Master | Login'}
+    return render_template('/master/login.html',**data)
 
 
 
@@ -51,3 +62,83 @@ body
 script
 
 
+developer
+advertier
+master
+
+
+
+def rtregister():
+    data = {'title': 'Client | Registration'}
+    return render_template('client/registration.html',**data)
+
+@app.route('/master/',methods=['GET','POST'])
+def master_login():
+
+    if request.method == 'POST' :
+        row = master().do_login(username=request.form['un_txt'])
+
+        if row is False:
+            flash(message='User Does not exist.')
+            return render_template('master/login.html')
+
+        if request.form['un_txt'] is None or request.form['pwd_txt'] is None :
+            flash(message='Invalid Username or Password.')
+            return render_template('master/login.html')
+        elif row[0][1] == request.form['un_txt'] :
+            if row[0][2] == request.form['pwd_txt']:
+                master.__username__ = request.form['un_txt']
+                master.__id__ = master().__getId__()
+                print master.__username__
+                if master().update_login() is True:
+                    session['logged_in'] = 1
+                    return redirect(url_for('rtmindex'))
+            else:
+                flash(message='Password Does not match.')
+                return render_template('master/login.html')
+        else:
+            flash(message='Invalid username')
+            return render_template('master/login.html')
+
+
+@app.route('/master/registration',methods=['GET','POST'])
+def master_register():
+    if request.method == 'POST':
+        flag = False
+        username = request.form['un_txt']
+        pwd = request.form['pwd_txt']
+        cpwd = request.form['cpwd_txt']
+        email = request.form['email_txt']
+
+        if request.form['un_txt'] and request.form['email_txt'] and request.form['pwd_txt'] and request.form['cpwd_txt'] is not None:
+            if pwd != cpwd :
+                flash(message='Password does not match.')
+                return render_template('master/login.html')
+            else:
+                error_msg = master().add_master(username, pwd, email)
+
+                print error_msg
+                if isinstance(error_msg,basestring) is True:
+                    flash(message=error_msg)
+                else:
+                    session['logged_in'] = 1
+                return redirect(url_for('rtmlogin'))
+        else:
+            flash(message='Enter valid data.')
+            return render_template('master/index.html')
+
+
+                                                <script type="text/javascript">
+													alert("Welcome!Please update your profile.")
+													if(confirm("Update Profile") == True)
+													{
+														{{ url_for('rtprofile') }}
+													}
+												</script>
+
+												<label class="block clearfix">
+														<span class="block input-icon input-icon-right">
+															<input type="email" name="email_txt" class="form-control" placeholder="Email" />
+															<i class="ace-icon fa fa-envelope"></i>
+														</span>
+												</label>

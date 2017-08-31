@@ -8,17 +8,62 @@
         {% block title %}
 			{{ title }}
 		{% endblock %}</title>
+	<script type="text/javascript">
+		alert(4);
+		alert(d);
+		function validate()
+		{
+			alert(5);
+			oform = document.forms[0];
+			oform.elements[]
+			var fname = oform.elements["fname_lbl"].value;
+			var lname = oform.elements["lname_lbl"].value;
+			var age = oform.elements["age_nbtn"].value;
+			var mobile = oform.elements["mobile_txt"].value;
+			var email = oform.elements["email_txt"].value;
+			alert(fname);
+			if(fname == "")
+			{
+				alert("fname")
+				oform.elements["fname_txt"].focus();
+				oform.elements["fname_lbl"].value = "Please enter first name.";
+				return false;
+			}
+			if (lname == "")
+			{
+				oform.elements["lname_txt"].focus();
+				oform.elements["lname_txt"].value = "Please enter last name.";
+				return false;
+			}
+			if (age == "" || isNaN(age) || age >= 18)
+			{
+				oform.elements["age_nbtn"].focus();
+				oform.elements["age_nbtn"].value = "Please enter your valid age.";
+				return false;
+			}
+			if (mobile == "" || isNaN(mobile))
+			{
+				oform.elements["mobile_txt"].focus();
+				oform.elements["mobile_txt"].value = "Please enter your valid mobile number.";
+				return false;
+			}
+			if(email == "")
+			{
+				oform.elements["email_txt"].focus();
+				oform.elements["email_txt"].value = "Please enter your email address.";
+				return false;
+			}
+		}
+	</script>
     {% endblock %}
 </head>
-<body class="no-trans" onload="javascript:profileload()">
-
+<body class="no-trans">
     {% block navbar %}
         {{ super() }}
     {% endblock %}
     {% block banner %}
         {{ super() }}
     {% endblock %}
-
     {% block content %}
 
 	<div class="section clearfix object-non-visible" data-animation-effect="fadeIn">
@@ -28,76 +73,63 @@
 	        <div class="row">
 			<div class="col-md-6">
 			<div class="footer-content">
-        	<form  method='POST' action="{{ url_for('rtprofile') }}">
+				{% if not udata %}
+					{% for r in udata %}
+						{% for c in range(0,(r|length)-1) %}
+							<input type="text" name="element" value="{{ udata[0][c] }}" class="form-control" readonly />
+						{% endfor %}
+					{% endfor %}
+				{% elif udata %}
+					<form  method='POST' action="#" name="profile">
+						<div class="form-group has-feedback">
+							<label class="sr-only" for="fname_txt" name="fname_lbl"></label>
+							<input type="text" name="fname_txt" class="form-control" id="fname_txt" placeholder="First Name" />
+							<i class="fa fa-user form-control-feedback"></i>
+						</div>
 
-			<div class="form-group has-feedback">
-				<label class="sr-only" for="name_txt"></label>
-				<input type="text" name="fname_txt" class="form-control" id="fname_txt" placeholder="First Name" required/>
-				<i class="fa fa-user form-control-feedback"></i>
-			</div>
+						<div class="form-group has-feedback">
+							<label class="sr-only" for="lname_txt" name="lname_txt"></label>
+							<input type="text" name="lname_txt" class="form-control" id="lname_txt" placeholder="Surname" /><br />
+							<i class="fa fa-user form-control-feedback"></i>
+						</div>
 
-			<div class="form-group has-feedback">
-				<label class="sr-only" for="lname_txt"></label>
-				<input type="text" name="lname_txt" class="form-control" id="lname_txt" placeholder="Surname" required/><br />
-				<i class="fa fa-user form-control-feedback"></i>
-			</div>
+						<div class="form-group has-feedback">
+							<input type="radio" name="gender_rbtn" value="True" checked>Male</input>
+							<input type="radio" name="gender_rbtn" value="False">Female</input>
+						</div>
 
-			<div class="form-group has-feedback">
-				<input type="radio" name="gender_rbtn" value="True" checked>Male</input>
-				<input type="radio" name="gender_rbtn" value="False">Female</input>
-			</div>
-               	            
+						<div class="form-group has-feedback">
+							<label class="sr-only" for="age_nbtn" name="age_lbl"></label>
+							<input type="number" name="age_nbtn" id="age_nbtn" class="form-control has-feedback" placeholder="Age" min="18" max="150"  />
+						</div>
 
-			<div class="form-group has-feedback">
-				<label class="sr-only" for="name_txt"></label>
-				<input type="number" name="age_nbtn" id="age_nbtn" class="form-control has-feedback" placeholder="Age" min="18" max="150" required />
-			</div>
-	
-			<div class="form-group has-feedback">
-				<label class="sr-only" for="name_txt"></label>
-				<input type="text" name="mobile_txt" id="mobile_txt" placeholder="Mobile Number" class="form-control" maxlength="10" pattern="[0-9]+" required>
-				<i class="fa fa-mobile form-control-feedback"></i>
-			</div>
+						<div class="form-group has-feedback">
+							<label class="sr-only" for="mobile_txt" name="mobile_lbl"></label>
+							<input type="text" name="mobile_txt" id="mobile_txt" placeholder="Mobile Number" class="form-control" maxlength="10" pattern="[0-9]+" >
+							<i class="fa fa-mobile form-control-feedback"></i>
+						</div>
 
-			<div class="form-group has-feedback">
-				<label class="sr-only" for="name_txt"></label>
-				<input type="email" name="email_txt" class="form-control" id="email_txt" placeholder="E-mail address" required/>
-				<i class="fa fa-envelope form-control-feedback"></i>
-			</div>
-			<input type="submit" name="update_btn" class="btn btn-default" id="update_txt" value="Update" required />
-            </form>
+						<div class="form-group has-feedback">
+							<label class="sr-only" for="email_txt" name="email_lbl"></label>
+							<input type="email" name="email_txt" class="form-control" id="email_txt" placeholder="E-mail address" />
+							<i class="fa fa-envelope form-control-feedback"></i>
+						</div>
+						<input type="submit" name="update_btn" class="btn btn-default" id="update_txt" value="Update" onclick="return validate()" />
+					</form>
 
+				{% endif %}
 			</div>
 			</div>
 			</div>
      	    </div>
        </div>
-
 	{% endblock %}
-
 	{% block footer %}
         {{ super() }}
     {% endblock %}
 
 	{% block script %}
-		<script type="text/javascript">
-    		$( window ).on( "load", function() {
-    		alert(0)
-        	console.log( "window loaded" );
-    		});
-
-		function profileload(){
-			alert(1)
-			{% if udata[0][7] %}
-				alert(2)
-  				document.getElementById('fname_txt').setAttribute('value',{{ udata[0][1] }});
-  				document.getElementById("lname_txt").setAttribute('value',{{ udata[0][2] }});
-  				document.getElementById("age_btn").setAttribute('value',{{ udata[0][4] }});
-  				document.getElementById("mobile_txt").setAttribute('value',{{ udata[0][5] }});
-  				document.getElementById("email_txt").setAttribute('value',{{ udata[0][6] }});
-  			{% endif %}
-		}
-		</script>
+		{{ super() }}
 	{% endblock %}
 </body>
 </html>

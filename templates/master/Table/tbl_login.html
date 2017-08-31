@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     {% endblock%}
     <title>{{ title }}</title>
-    {% block css%}
+    {% block css %}
         {{ super() }}
     {% endblock %}
 {% endblock %}
@@ -72,21 +72,21 @@
                     {% if r[5] %}
                         {% if r[6] %}
                             <td class="hidden-480">
-                                <span class="label label-sm label-success arrowed-in">Online</span>
+                                <span class="label label-lg label-purple arrowed-in">Online</span>
                             </td>
                         {% elif not r[6] %}
                             <td class="hidden-480">
-                                <span class="label label-sm label-warning arrowed-in">Offline</span>
+                                <span class="label label-lg label-purple arrowed-in">Offline</span>
                             </td>
                         {% endif %}
-                    {% elif  not r[5] %}
+                    {% elif not r[5] %}
                         {% if r[6] %}
                             <td class="hidden-480">
-                                <span class="label label-sm label-success arrowed-in">Online</span>
+                                <span class="label label-lg label-red arrowed-in">Online</span>
                             </td>
                         {% elif not r[6] %}
                             <td class="hidden-480">
-                                <span class="label label-sm label-warning arrowed-in">Offline</span>
+                                <span class="label label-lg label-red arrowed-in">Offline</span>
                             </td>
                         {% endif %}
                     {% endif %}

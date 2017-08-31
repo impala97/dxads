@@ -479,6 +479,7 @@ COPY contact (id, name, email, message, "time") FROM stdin;
 20	bhavik1991	bhavik@itmusketeers.com	hello! i am bhavik vyas.	2017-08-23 13:42:00
 21	bhavik1991	bhavik@itmusketeers.com	test 230820171534	2017-08-23 15:34:00
 23	smit	sr_mehta@itmuskeeters.com	test 230820171545	2017-08-23 15:45:00
+24	bhavik1991	bhavik@itmusketeers.com	pankaj bhai	2017-08-26 11:19:00
 \.
 
 
@@ -486,7 +487,7 @@ COPY contact (id, name, email, message, "time") FROM stdin;
 -- Name: contact_id_seq; Type: SEQUENCE SET; Schema: dxads_sch; Owner: postgres
 --
 
-SELECT pg_catalog.setval('contact_id_seq', 23, true);
+SELECT pg_catalog.setval('contact_id_seq', 24, true);
 
 
 --
@@ -494,9 +495,10 @@ SELECT pg_catalog.setval('contact_id_seq', 23, true);
 --
 
 COPY login (id, name, password, active, last_login, status, live) FROM stdin;
-3	test	test	f	2017-08-19 13:04:00	f	f
-1	smit	sr@itmcs	f	2017-08-24 20:19:00	f	t
-2	bhavik1991	bhavikvyas	f	2017-08-25 10:04:00	f	t
+2	bhavik1991	bhavikvyas	t	2017-08-30 19:02:00	t	f
+4	srmehta	srmehta	t	2017-08-30 20:07:00	f	t
+1	smit	sr@itmcs	t	2017-08-26 20:51:00	t	f
+3	test	test	t	2017-08-30 21:17:00	f	t
 \.
 
 
@@ -504,7 +506,7 @@ COPY login (id, name, password, active, last_login, status, live) FROM stdin;
 -- Name: login_id_seq; Type: SEQUENCE SET; Schema: dxads_sch; Owner: postgres
 --
 
-SELECT pg_catalog.setval('login_id_seq', 3, true);
+SELECT pg_catalog.setval('login_id_seq', 4, true);
 
 
 --
@@ -533,8 +535,10 @@ SELECT pg_catalog.setval('menu_id_seq', 6, true);
 --
 
 COPY profile (id, fname, lname, gender, age, mobile, email, init) FROM stdin;
+2	bhavik    	vyas      	t	26	9033986379	bhavik@itmusketeers.com	t
 1	Smit      	Mehta     	t	20	9904274495	sr_mehta@itmuskeeters.com	t
-2	bhavik    	vyas      	t	25	9033986379	bhavik@itmusketeers.com	t
+4	sr        	mehta     	t	20	9904274495	mehtasmit44@gmail.com	t
+3	test      	test      	t	20	1234567890	test@itmusketeers.com	t
 \.
 
 
@@ -598,8 +602,8 @@ SELECT pg_catalog.setval('chat_id_seq', 5, true);
 --
 
 COPY login (id, name, pwd, email, active, last_login, status, live) FROM stdin;
-4	srmehta	srmehta	sr_mehta@itmusketeers.com	t	2017-08-24 20:19:00	f	t
-3	bhavik1991	bhavikvyas	bhavik@itmusketeers.com	t	2017-08-25 10:05:00	f	t
+4	srmehta	srmehta	sr_mehta@itmusketeers.com	t	2017-08-26 11:20:00	f	t
+3	bhavik1991	bhavikvyas	bhavik@itmusketeers.com	t	2017-08-26 20:29:00	f	f
 \.
 
 

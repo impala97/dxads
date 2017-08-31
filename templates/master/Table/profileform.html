@@ -20,7 +20,7 @@
 <div class="row">
     <div class="col-xs-12">
         <h3 class="header smaller lighter blue"> Login Table</h3>
-            <form method="POST" action="{{url_for('update') }}">
+            <form method="POST" action="{{url_for('UpdateProfile') }}">
                 <input type="hidden" name="old_id" value="{{ id }}">
                     <div class="row">
                     <div class="col-xs-12">
@@ -31,25 +31,28 @@
                             <table id="dynamic-table" class="table table-striped table-bordered table-hover">
                                 <thead>
                                      <tr>
-                                        <th>ID</th>
-                                        <th>Name</th>
-                                        <th class="hidden-480">Password</th>
-                                        <th>
-                                            <i class="ace-icon fa fa-clock-o bigger-110 hidden-480"></i>
-                                        Active
-                                        </th>
+                                         <th>ID</th>
+                                         <th>Fname</th>
+                                         <th>Lname</th>
+                                         <th>gender</th>
+                                         <th>Age</th>
+                                         <th>Mobile</th>
+                                         <th>Email</th>
                                          <th></th>
                                      </tr>
                                 </thead>
                                 <tbody>
                                 <tr>
-                                    <td><input type="text" name="id" value="{{ data[0][0] }}" /></td>
-                                    <td><input type="text" name="name" value="{{ data[0][1] }}" /></td>
-                                    <td><input type="text" name="password" value="{{ data[0][2] }}" /></td>
-                                    <td><input type="text" name="active" value="{{ data[0][3] }}" /></td>
+                                    <td><input type="text" class="form-control" name="id" value="{{ data[0][0] }}" /></td>
+                                    <td><input type="text" class="form-control" name="fname" value="{{ data[0][1] }}" /></td>
+                                    <td><input type="text" class="form-control" name="lname" value="{{ data[0][2] }}" /></td>
+                                    <td><input type="text" class="form-control" name="gender" value="{{ data[0][3] }}" /></td>
+                                    <td><input type="text" class="form-control" name="age" value="{{ data[0][4] }}" /></td>
+                                    <td><input type="text" class="form-control" name="mobile" value="{{ data[0][5] }}" /></td>
+                                    <td><input type="text" class="form-control" name="email" value="{{ data[0][6] }}" /></td>
                                     <td>
-                                        <a href="{{ url_for('update') }}">
-                                            <button type="submit" name="Update" value="{{ data[0][0][0] }}" >Update</button>
+                                        <a href="{{ url_for('UpdateProfile') }}">
+                                            <button type="submit" name="Update">Update</button>
                                         </a>
                                     </td>
                                 </tr>

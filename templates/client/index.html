@@ -62,7 +62,7 @@
 							<!-- name-and-slogan -->
 							<div class="site-name-and-slogan smooth-scroll">
 								<div class="site-name"><a href="#banner">Digital Marketing</a></div>
-								<div class="site-slogan">Free Bootstrap Theme by <a target="_blank" href="http://ITMCS.me">ITMCS</a></div>
+								<div class="site-slogan">Welcome! Mr.<a target="_blank" href="{{url_for('rtprofile')}}">{{username}}</a></div>
 							</div>
 
 						</div>
@@ -108,13 +108,7 @@
                                                 <li><a href="{{ url_for('rtlogin') }}">log in</a></li>
   												{% else %}
                                                 <li><a href="{{ url_for('logout') }}">log out</a></li>
-												<script type="text/javascript">
-													alert("Welcome!Please update your profile.")
-													if(confirm("Update Profile") == True)
-													{
-														{{ url_for('rtregister') }}
-													}
-												</script>
+
   												{% endif %}
 											</ul>
 										</div>
@@ -1054,6 +1048,13 @@
 
 		<!-- Custom Scripts -->
 		<script type="text/javascript" src="{{ url_for('static',filename='client/js/custom.js') }}"></script>
+		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+		<script>
+  			(adsbygoogle = window.adsbygoogle || []).push({
+    		google_ad_client: "ca-pub-1984675358960603",
+    		enable_page_level_ads: true
+  			});
+		</script>
 		{% endblock %}
 	</body>
 </html>

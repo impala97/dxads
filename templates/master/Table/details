@@ -1,0 +1,23 @@
+dxads_sch
+    login
+    profile
+    contact
+    tables
+    menu
+master_sch
+    login
+    tables
+
+access control
+developer
+    developer can see posts published by company owner
+    and from that make a deal with company owner to built product for that brands.
+advertiser
+    advertiser can add link of ads into him/his website
+    and get paid on the base of click and successfull login.
+company owner
+    comapny owner can post to built there brands and make them popular to world wide.
+    company owner has to pay
+visitor(optional)
+    visitor can see video ads and get paid on the bases of
+master admin side

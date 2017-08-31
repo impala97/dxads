@@ -1,6 +1,5 @@
 from config import config
 from psqldb import dbcon
-import sys
 import datetime
 
 class user():
@@ -34,9 +33,9 @@ class user():
         else:
             return None
 
-    def profile(self,fname,lname,gender,age,mobile,email):
+    def profile(self,id,fname,lname,gender,age,mobile,email):
         insert = "insert into dxads_sch.profile(id,fname,lname,gender,age,mobile,email,init) values(%d,'%s','%s','%s','%s','%s','%s','1');" % (
-        config.__id__, fname, lname, gender, age, mobile, email)
+        id, fname, lname, gender, age, mobile, email)
         config.__email__ = email
         return dbcon().do_insert(insert)
 
@@ -51,7 +50,7 @@ class user():
 
     def update_login(self,id):
         date = self.currentdate()
-        insert = "update dxads_sch.login set last_login = '%s',status='0',live='1' where id=%d;" % (date,id)
+        insert = "update dxads_sch.login set last_login = '%s',live='1' where id=%d;" % (date,id)
         return dbcon().do_insert(insert)
 
     def update_logout(self,id):
@@ -78,9 +77,9 @@ class user():
             update = "update dxads_sch.profile set id=%d where id=%d ;" % (int(old_id),int(id))
             return dbcon().do_insert(update)
 
-    def updateProfile(self,fname,lname,gender,id,age,mobile,email):
-        update = "update dxads_sch.profile set fname='%s',lname='%s',gender='%s',age=%d,mobile=%d email='%s' where id=%d" % (
-        fname,lname,gender,int(age),mobile,email,id)
+    def updateProfile(self,id,fname,lname,gender,age,mobile,email,old_id):
+        update = "update dxads_sch.profile set id = %d ,fname='%s',lname='%s',gender='%s',age=%d,mobile=%d ,email='%s' where id=%d" % (int(id),
+        fname,lname,gender,int(age),int(mobile),email,int(old_id))
         return dbcon().do_insert(update)
 
     #------------get data---------
@@ -89,9 +88,9 @@ class user():
         return dbcon().do_select(select)
 
     def getProfileData(self,id):
-        select = "select * from dxads_sch.profile where id=%d;" %id
-        print select
-        return dbcon().do_select(select)
+        select = "select * from dxads_sch.profile where id=%d;" %int(id)
+        row = dbcon().do_select(select)
+        return row
 
     def getLoginData(self,id):
         select = "select * from dxads_sch.login where id=%d;" %int(id)

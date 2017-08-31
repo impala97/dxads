@@ -1,22 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-
-</body>
-</html><!DOCTYPE html>
 {% extends "master/index.html" %}
 <html lang="en">
 <head>
 {% block head %}
-    {% block meta%}
+    {% block meta %}
     <meta charset="UTF-8">
     {% endblock%}
     <title>{{ title }}</title>
-    {% block css%}
+    {% block css %}
         {{ super() }}
     {% endblock %}
 {% endblock %}
@@ -52,13 +43,13 @@
                                 </thead>
                                 <tbody>
                                 <tr>
-                                    <td><input type="text" name="id" value="{{ data[0][0] }}" /></td>
-                                    <td><input type="text" name="name" value="{{ data[0][1] }}" /></td>
-                                    <td><input type="text" name="password" value="{{ data[0][2] }}" /></td>
-                                    <td><input type="text" name="active" value="{{ data[0][3] }}" /></td>
+                                    <td><input type="text" class="form-control" name="id" value="{{ data[0][0] }}" /></td>
+                                    <td><input type="text" class="form-control" name="name" value="{{ data[0][1] }}" /></td>
+                                    <td><input type="text" class="form-control" name="password" value="{{ data[0][2] }}" /></td>
+                                    <td><input type="text" class="form-control" name="active" value="{{ data[0][3] }}" /></td>
                                     <td>
                                         <a href="{{ url_for('update') }}">
-                                            <button type="submit" name="Update" value="{{ data[0][0][0] }}" >Update</button>
+                                            <button type="submit" name="Update">Update</button>
                                         </a>
                                     </td>
                                 </tr>

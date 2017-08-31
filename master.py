@@ -21,7 +21,7 @@ class master:
     def __getId__(self):
         select = "select id from master_sch.login where name='%s'"%master.__username__
         row = dbcon().do_select(select)
-        print row[0][0]
+        print row
         return row[0][0]
 
     def getMasterTableData(self):
@@ -41,8 +41,8 @@ class master:
         insert = "update master_sch.login set last_login = '%s',status='0',live='1' where id=%d;"%(date,master.__id__)
         return dbcon().do_insert(insert)
 
-    def update_logout(self):
-        update = "update master_sch.login set live='0' where id=%d" %self.__id__
+    def update_logout(self,id):
+        update = "update master_sch.login set live='0' where id=%d" %id
         return dbcon().do_insert(update)
 
     #----------------access before login-------------------------
@@ -76,5 +76,7 @@ class master:
 
     def DeletebyId(self,id=0):
         delete = "delete * from "
+
+
 if __name__ == "__main__":
     master()

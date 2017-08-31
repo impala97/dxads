@@ -1,0 +1,27 @@
+<html>
+<head>
+    <title>MASTER | TEST </title>
+</head>
+<body>
+    <form name="form1">
+        <input type="text" name="fname" id="id0" />
+        <input type="text" name="lname" id="id1" />
+
+        <button type="submit" onclick="return valid()"></button>
+    </form>
+
+
+    <p id="demo">sdf</p>
+    <script type="text/javascript">
+        function valid()
+        {
+            oform = document.forms[0];
+            var fname = oform.elements["fname"].value;
+            var lname = oform.elements["lname"];
+
+            document.getElementById("demo").innerHTML = fname ;
+            alert(fname);
+            return false;
+        }
+    </script>
+</body>
